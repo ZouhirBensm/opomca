@@ -7,6 +7,7 @@ const PORT = process.env['PORT']
 
 
 
+const affiliateLinks_app_router = require('./affiliatelinks-backend')
 
 const { ENV, SIG } = require('./data/types/types_1')
 
@@ -28,6 +29,12 @@ app.get('/', (req, res, next) => {
 
   return res.render('index')
 })
+
+
+app.use('/ral', affiliateLinks_app_router)
+
+
+
 
 
 
