@@ -12,7 +12,7 @@ affiliateLinks_app_router.get('/one', (req,res)=>{
 // fe: Front-end
 // https://opom.ca/ral/one-fe
 affiliateLinks_app_router.get('/one-fe', (req,res)=>{
-  return res.render('redirect-one');
+  return res.render('redirects-fe/redirect-one');
 })
 
 // https://opom.ca/ral/two
@@ -35,7 +35,7 @@ affiliateLinks_app_router.get('/four', (req,res)=>{
 
 // https://opom.ca/ral/four-fe
 affiliateLinks_app_router.get('/four-fe', (req,res)=>{
-  return res.render('redirect-four');
+  return res.render('redirects-fe/redirect-four');
 })
 
 // https://opom.ca/ral/five
@@ -52,19 +52,19 @@ affiliateLinks_app_router.get('/six', (req,res)=>{
 
 // https://opom.ca/ral/six-fe
 affiliateLinks_app_router.get('/six-fe', (req,res)=>{
-  return res.render('redirect-six');
+  return res.render('redirects-fe/redirect-six');
 })
 
 
 // https://opom.ca/ral/seven-fe
 affiliateLinks_app_router.get('/seven-fe', (req,res)=>{
-  return res.render('redirect-seven');
+  return res.render('redirects-fe/redirect-seven');
 })
 
 
 // https://opom.ca/ral/eight-fe
 affiliateLinks_app_router.get('/eight-fe', (req,res)=>{
-  return res.render('redirect-eight');
+  return res.render('redirects-fe/redirect-eight');
 })
 
 
@@ -75,7 +75,7 @@ affiliateLinks_app_router.get('/nine', (req,res)=>{
 
 // https://opom.ca/ral/nine-fe
 affiliateLinks_app_router.get('/nine-fe', (req,res)=>{
-  return res.render('redirect-nine');
+  return res.render('redirects-fe/redirect-nine');
 })
 
 
@@ -87,7 +87,7 @@ affiliateLinks_app_router.get('/ten', (req,res)=>{
 
 // https://opom.ca/ral/ten-fe
 affiliateLinks_app_router.get('/ten-fe', (req,res)=>{
-  return res.render('redirect-ten');
+  return res.render('redirects-fe/redirect-ten');
 })
 
 
@@ -100,7 +100,7 @@ affiliateLinks_app_router.get('/eleven', (req,res)=>{
 
 // https://opom.ca/ral/eleven-fe
 affiliateLinks_app_router.get('/eleven-fe', (req,res)=>{
-  return res.render('redirect-eleven');
+  return res.render('redirects-fe/redirect-eleven');
 })
 
 
@@ -116,7 +116,7 @@ affiliateLinks_app_router.get('/twelve', (req,res)=>{
 
 // https://opom.ca/ral/twelve-fe
 affiliateLinks_app_router.get('/twelve-fe', (req,res)=>{
-  return res.render('redirect-twelve');
+  return res.render('redirects-fe/redirect-twelve');
 })
 
 
@@ -129,7 +129,7 @@ affiliateLinks_app_router.get('/thirteen', (req,res)=>{
 
 // https://opom.ca/ral/thirteen-fe
 affiliateLinks_app_router.get('/thirteen-fe', (req,res)=>{
-  return res.render('redirect-thirteen');
+  return res.render('redirects-fe/redirect-thirteen');
 })
 
 
@@ -142,7 +142,7 @@ affiliateLinks_app_router.get('/fourteen', (req,res)=>{
 
 // https://opom.ca/ral/fourteen-fe
 affiliateLinks_app_router.get('/fourteen-fe', (req,res)=>{
-  return res.render('redirect-fourteen');
+  return res.render('redirects-fe/redirect-fourteen');
 })
 
 
@@ -155,7 +155,7 @@ affiliateLinks_app_router.get('/fifteen', (req,res)=>{
 
 // https://opom.ca/ral/fifteen-fe
 affiliateLinks_app_router.get('/fifteen-fe', (req,res)=>{
-  return res.render('redirect-fifteen');
+  return res.render('redirects-fe/redirect-fifteen');
 })
 
 
@@ -168,7 +168,7 @@ affiliateLinks_app_router.get('/sixteen', (req,res)=>{
 
 // https://opom.ca/ral/sixteen-fe
 affiliateLinks_app_router.get('/sixteen-fe', (req,res)=>{
-  return res.render('redirect-fifteen');
+  return res.render('redirects-fe/redirect-sixteen');
 })
 
 
@@ -184,7 +184,7 @@ affiliateLinks_app_router.get('/seventeen', (req,res)=>{
 
 // https://opom.ca/ral/seventeen-fe
 affiliateLinks_app_router.get('/seventeen-fe', (req,res)=>{
-  return res.render('redirect-seventeen');
+  return res.render('redirects-fe/redirect-seventeen');
 })
 
 
@@ -198,7 +198,7 @@ affiliateLinks_app_router.get('/eighteen', (req,res)=>{
 
 // https://opom.ca/ral/eighteen-fe
 affiliateLinks_app_router.get('/eighteen-fe', (req,res)=>{
-  return res.render('redirect-eighteen');
+  return res.render('redirects-fe/redirect-eighteen');
 })
 
 
