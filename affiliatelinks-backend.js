@@ -264,9 +264,17 @@ affiliateLinks_app_router.get('/twenty-five', (req,res)=>{
 })
 
 
+// https://opom.ca/ral/twenty-six
+affiliateLinks_app_router.get('/twenty-six', (req,res)=>{
+  return res.redirect('https://lvnta.com/lv_BeM9z9Ba223ruVu4a8?url=https%3A%2F%2Famazon.com%2Fdp%2FB07RSC6C46');
+})
 
 
-// twenty-six, twenty-seven, twenty-eight, twenty-nine, thirty.
+
+
+
+
+// twenty-seven, twenty-eight, twenty-nine, thirty.
 
 module.exports = affiliateLinks_app_router
 
