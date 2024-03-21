@@ -280,6 +280,12 @@ affiliateLinks_app_router.get('/twenty-seven', (req,res)=>{
 
 
 
+// https://opom.ca/ral/twenty-eight
+affiliateLinks_app_router.get('/twenty-eight', (req,res)=>{
+  return res.redirect('https://go.fiverr.com/visit/?bta=955713&brand=fp&landingPage=https%3A%2F%2Fwww.fiverr.com%2Flogo__classic%2Fcreate-unique-3d-business-logo-design%3Fcontext_referrer%3Dsubcategory_listing%26source%3Dcategory_tree%26ref_ctx_id%3D1a6a2ba039964905b8bbcfd4602693d8%26pckg_id%3D1%26pos%3D1%26ad_key%3D5f966739-df88-4262-a061-ed87a19bfb5e%26context_type%3Drating%26funnel%3D1a6a2ba039964905b8bbcfd4602693d8%26imp_id%3D8437fae4-c499-4cce-b864-28889f2aa073');
+})
+
+
 
 
 
