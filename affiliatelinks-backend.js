@@ -286,10 +286,17 @@ affiliateLinks_app_router.get('/twenty-eight', (req,res)=>{
 })
 
 
+// https://opom.ca/ral/twenty-nine
+affiliateLinks_app_router.get('/twenty-nine', (req,res)=>{
+  return res.redirect('https://go.fiverr.com/visit/?bta=955713&brand=fp&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fnthamali85%2Fdesign-3-business-card-businesscard-in-24h%3Fcontext_referrer%3Dsubcategory_listing%26source%3Dcategory_tree%26ref_ctx_id%3Dd1dfb9c834c14249986cd67fec4a1cf2%26pckg_id%3D1%26pos%3D2%26ad_key%3Dbfd29654-ba13-43b1-8624-74ecbb55dec3%26context_type%3Drating%26funnel%3Dd1dfb9c834c14249986cd67fec4a1cf2%26imp_id%3Dfc40bd29-8771-4de8-b53e-d756edb301e6');
+})
 
 
 
-// twenty-eight, twenty-nine, thirty.
+
+
+
+// twenty-nine, thirty.
 
 module.exports = affiliateLinks_app_router
 
