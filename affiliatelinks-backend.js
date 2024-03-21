@@ -271,10 +271,19 @@ affiliateLinks_app_router.get('/twenty-six', (req,res)=>{
 
 
 
+// https://opom.ca/ral/twenty-seven
+affiliateLinks_app_router.get('/twenty-seven', (req,res)=>{
+  return res.redirect('https://go.fiverr.com/visit/?bta=955713&brand=fp&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fklevitt70%2Fpromote-your-etsy-shop%3Fcontext_referrer%3Dsearch_gigs_with_modalities%26source%3Dchoice_modalities_pricing%26ref_ctx_id%3D26069fa15b8b449aab17f0988daaa5f0%26fiverr_choice%3Dtrue%26pckg_id%3D1%26pos%3D3%26context_type%3Dauto%26funnel%3D26069fa15b8b449aab17f0988daaa5f0%26seller_online%3Dtrue%26imp_id%3Dcd867826-79f7-4970-8ca8-fc1942ee8e9e');
+})
 
 
 
-// twenty-seven, twenty-eight, twenty-nine, thirty.
+
+
+
+
+
+// twenty-eight, twenty-nine, thirty.
 
 module.exports = affiliateLinks_app_router
 
