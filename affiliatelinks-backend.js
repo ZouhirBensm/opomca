@@ -292,11 +292,14 @@ affiliateLinks_app_router.get('/twenty-nine', (req,res)=>{
 })
 
 
+// https://opom.ca/ral/thirty
+affiliateLinks_app_router.get('/thirty', (req,res)=>{
+  return res.redirect('https://go.fiverr.com/visit/?bta=955713&brand=fp&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fmrcbttgl%2Fdesign-modern-hand-lettering-for-for-any-use%3Fcontext_referrer%3Dsubcategory_listing%26source%3Dcategory_tree%26ref_ctx_id%3D2d294c38c5554d0d8019b5dfcb2b8e12%26pckg_id%3D1%26pos%3D5%26context_type%3Drating%26funnel%3D2d294c38c5554d0d8019b5dfcb2b8e12%26imp_id%3D857872b2-9980-461e-bf9f-e18af5bf3496');
+})
 
 
 
 
-// twenty-nine, thirty.
 
 module.exports = affiliateLinks_app_router
 
