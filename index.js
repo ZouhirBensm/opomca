@@ -31,6 +31,13 @@ app.get('/', (req, res, next) => {
 })
 
 
+// To further template into /blog/:category/blog-posting/:blog-article-title
+app.get('/blog/drywall/blog-posting/enhancing-your-space-with-professional-drywall-services', (req, res, next) => {
+  return res.render('enhancing-your-space-with-professional-drywall-services')
+})
+
+
+
 app.use('/ral', affiliateLinks_app_router)
 
 
