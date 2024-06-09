@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+const fs = require('fs');
+
 require('dotenv').config()
 
 const PORT = process.env['PORT']
@@ -9,6 +11,8 @@ const PORT = process.env['PORT']
 
 const affiliateLinks_app_router = require('./affiliatelinks-backend')
 
+
+const createSiteMap = require('./miscallaneous/utils/custom-sitemap')
 const { ENV, SIG } = require('./data/types/types_1')
 
 
@@ -35,6 +39,53 @@ app.get('/', (req, res, next) => {
 app.get('/blog/drywall/blog-posting/enhancing-your-space-with-professional-drywall-services', (req, res, next) => {
   return res.render('enhancing-your-space-with-professional-drywall-services')
 })
+
+
+
+
+app.get('/sitemap/xml-sitemap', (req, res) => {
+
+  const now = new Date()
+  console.log(now)
+
+  // TODO update
+  let last_modified_1 = '2024-06-09T16:43:42.378Z'
+  let last_modified_1_date = new Date(last_modified_1);
+
+
+  const urls = [
+    {
+      URL: '/',
+      lastmod: last_modified_1_date,
+      changefreq: "yearly",
+      // hreflang: "en",
+      priority: 1
+    },
+    {
+      URL: '/blog/drywall/blog-posting/enhancing-your-space-with-professional-drywall-services',
+      lastmod: last_modified_1_date,
+      changefreq: "yearly",
+      // hreflang: "en",
+      priority: 1
+    }
+  ];
+
+
+
+
+  const xml = createSiteMap(urls)
+
+  fs.writeFileSync(`./public/sitemap/sitemap.xml`, xml, 'utf-8');
+
+  return res.render('index')
+});
+
+
+
+
+
+
+
 
 
 
