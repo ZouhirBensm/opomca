@@ -42,6 +42,13 @@ app.get('/blog/drywall/blog-posting/enhancing-your-space-with-professional-drywa
 
 
 
+// To further template into /blog/:category/blog-posting/:blog-article-title
+app.get('/seo/citation-listing-identifier/drywall-kingston/1', (req, res, next) => {
+  return res.render('a-tag-citation-listing-drywall-kingston')
+})
+
+
+
 
 app.get('/sitemap/xml-sitemap', (req, res) => {
 
@@ -96,6 +103,8 @@ app.use('/ral', affiliateLinks_app_router)
 
 
 
+
+
 // Try accessing this URL localhost:3005/no_existant and that will trigger this middleware
 app.use((req, res, next) => {
   if (req.method === "GET") {
@@ -127,6 +136,9 @@ app.use((error, req, res, next) => {
   })
 
 })
+
+
+
 
 
 
