@@ -57,7 +57,10 @@ app.get('/sitemap/xml-sitemap', (req, res) => {
 
   // TODO update
   let last_modified_1 = '2024-06-09T16:43:42.378Z'
+  let last_modified_2 = '2024-06-15T15:56:22.543Z'
   let last_modified_1_date = new Date(last_modified_1);
+  let last_modified_2_date = new Date(last_modified_2);
+  
 
 
   const urls = [
@@ -71,6 +74,13 @@ app.get('/sitemap/xml-sitemap', (req, res) => {
     {
       URL: '/blog/drywall/blog-posting/enhancing-your-space-with-professional-drywall-services',
       lastmod: last_modified_1_date,
+      changefreq: "yearly",
+      // hreflang: "en",
+      priority: 1
+    },
+    {
+      URL: '/seo/citation-listing-identifier/drywall-kingston/1',
+      lastmod: last_modified_2_date,
       changefreq: "yearly",
       // hreflang: "en",
       priority: 1
