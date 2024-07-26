@@ -47,6 +47,17 @@ app.get('/seo/citation-listing-identifier/drywall-kingston/1', (req, res, next) 
   return res.render('a-tag-citation-listing-drywall-kingston')
 })
 
+// To further template into /blog/:category/blog-posting/:blog-article-title
+app.get('/seo/citation-listing-identifier/earnanswers/1', (req, res, next) => {
+  return res.render('a-tag-citation-listing-earnanswers')
+})
+
+
+// To further template into /blog/:category/blog-posting/:blog-article-title
+app.get('/seo/citation-listing-identifier/bidblock/1', (req, res, next) => {
+  return res.render('a-tag-citation-listing-bidblock')
+})
+
 
 
 
@@ -58,8 +69,10 @@ app.get('/sitemap/xml-sitemap', (req, res) => {
   // TODO update
   let last_modified_1 = '2024-06-09T16:43:42.378Z'
   let last_modified_2 = '2024-06-15T15:56:22.543Z'
+  let last_modified_3 = '2024-07-26T17:14:29.951Z'
   let last_modified_1_date = new Date(last_modified_1);
   let last_modified_2_date = new Date(last_modified_2);
+  let last_modified_3_date = new Date(last_modified_3);
   
 
 
@@ -80,7 +93,21 @@ app.get('/sitemap/xml-sitemap', (req, res) => {
     },
     {
       URL: '/seo/citation-listing-identifier/drywall-kingston/1',
-      lastmod: last_modified_2_date,
+      lastmod: last_modified_3_date,
+      changefreq: "yearly",
+      // hreflang: "en",
+      priority: 1
+    },
+    {
+      URL: '/seo/citation-listing-identifier/earnanswers/1',
+      lastmod: last_modified_3_date,
+      changefreq: "yearly",
+      // hreflang: "en",
+      priority: 1
+    },
+    {
+      URL: '/seo/citation-listing-identifier/bidblock/1',
+      lastmod: last_modified_3_date,
       changefreq: "yearly",
       // hreflang: "en",
       priority: 1
