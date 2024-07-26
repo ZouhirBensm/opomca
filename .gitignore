@@ -1,3 +1,4 @@
 node_modules
 .env
 note
+/public/sitemap/sitemap.xml
