@@ -14,6 +14,8 @@ const createSiteMap = require('./miscellaneous/utils/custom-sitemap')
 const Compression = require('./miscellaneous/services/compression/compression-middleware')
 
 
+const affiliateLinks_app_router = require('./affiliatelinks-backend')
+
 
 
 const dialect = 'mysql'
@@ -104,6 +106,8 @@ goneUrls.forEach(url => {
 
 
 
+
+app.use('/ral', affiliateLinks_app_router)
 
 
 
