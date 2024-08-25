@@ -57,20 +57,20 @@ async function mid1(req, res, next) {
   }
 
 
-  const demande_de_devis_gratuit_fr = await db.demande_de_devis_gratuit_fr.findOne({
+  const contact_fr = await db.contact_fr.findOne({
     // attributes: ['slug', 'title'],
     raw: true
   });
 
-  if (!demande_de_devis_gratuit_fr) {
-    const error = new Error("No demande_de_devis_gratuit_fr found!")
+  if (!contact_fr) {
+    const error = new Error("No contact_fr found!")
     return next(error)
   }
 
 
 
   // console.log(nav_fr, welcome_section_fr, business_data_fr, all_data_per_page_fr)
-  console.log(demande_de_devis_gratuit_fr)
+  console.log(contact_fr)
 
 
 
@@ -81,7 +81,7 @@ async function mid1(req, res, next) {
     welcome_section_fr: welcome_section_fr,
     all_data_per_page_fr: all_data_per_page_fr,
     footer_fr: footer_fr,
-    demande_de_devis_gratuit_fr: demande_de_devis_gratuit_fr
+    contact_fr: contact_fr
   }
 
 

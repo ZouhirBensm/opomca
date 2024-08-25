@@ -112,7 +112,7 @@
                 <div class="tm-portfolio-description">
                   <h2 class="tm-text-black">
                     <%= service.service_name %>
-                      <a class="tm-title-small" href="/service/<%= service.slug %>">
+                      <a class="tm-title-small" href="/seo/<%= service.slug %>">
                         <%= portfolio_section_fr.op1 %>
                       </a>
                   </h2>
@@ -131,26 +131,29 @@
 
 
             <%
-            const more_service_img_alt = "A close-up view of a driveway with a combination of asphalt and interlocking stone pavers, showing a clean transition between the two materials and bordered by a stone curb."
+            const more_service_img_alt = "##"
             %>
 
             <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue"
-                aria-label="<%= more_service_img_alt %>">
+
+              <!-- <div class="tm-portfolio-name text-white tm-bg-blue"
+                aria-label="< %= more_service_img_alt %>">
                 <img src="/img/more_services1.webp"
-                  alt="<%= more_service_img_alt %>" style="display:none;">
-              </div>
+                  alt="< %= more_service_img_alt %>" style="display:none;">
+              </div> -->
 
 
-              <style>
+
+
+              <!-- <style>
                 section#tmPortfolio .tm-portfolio-item:nth-of-type(4) .tm-portfolio-name {
                   background-image: url('../img/more_services1.webp');
                 }
-              </style>
+              </style> -->
 
 
 
-              <div class="tm-portfolio-description">
+              <div class="tm-portfolio-description" style="width: 100%;">
                 <h2 class="tm-text-black">
                   <%= portfolio_section_fr.op2 %>
                   <a class="tm-title-small" href="#">
@@ -162,7 +165,7 @@
                 <div>
                   <ul>
                     <% extra_service_pages_fr.forEach(function(service) { %>
-                      <li><a href="/service/<%= service.slug %>"><%= service.title %></a></li>
+                      <li><a href="/seo/<%= service.slug %>"><%= service.title %></a></li>
                     <% }); %>
                   </ul>
 
@@ -171,6 +174,12 @@
                 </p>
               </div>
             </div>
+
+
+
+
+
+
 
 
 
@@ -236,6 +245,7 @@
 
 
     <!-- Review section -->
+    
     <div id="tmContact" class="parallax-window" data-parallax="scroll" data-image-src="/img/pavage_gatineau_b1.webp"
     alt="Two workers installing a large drywall sheet in a residential construction project in Kingston, Ontario.">
       <div class="container-fluid">
@@ -248,30 +258,31 @@
 
 
 
-              <% review_data_fr.forEach(function(review) { %>
+
+              <!-- < % review_data_fr.forEach(function(review) { %>
               <div class="tm-contact-item">
-                <!-- Review Text -->
+                
                 <p>
-                  <%= review.review_body %>
+                  < %= review.review_body %>
                 </p>
-                <!-- Reviewer Name -->
+                
                 <p class="mb-0">
-                  <%= review.name %>
+                  < %= review.name %>
                 </p>
 
-                <!-- Star Rating -->
+                
                 <div class="star-rating">
-                  <div class="stars-<%= Math.floor(review.rating_value) %>">
-                    <% for(let i = 1; i <= 5; i++) { %>
-                      <span class="star <%= i <= Math.floor(review.rating_value) ? 'filled' : (i === Math.ceil(review.rating_value) && review.rating_value % 1 !== 0 ? 'half-filled' : '') %>">★</span>
-                    <% } %>
+                  <div class="stars-< %= Math.floor(review.rating_value) %>">
+                    < % for(let i = 1; i <= 5; i++) { %>
+                      <span class="star < %= i <= Math.floor(review.rating_value) ? 'filled' : (i === Math.ceil(review.rating_value) && review.rating_value % 1 !== 0 ? 'half-filled' : '') %>">★</span>
+                    < % } %>
                   </div>
                 </div>
 
                 <div class="svg-wrapper"></div>
                 <div class="svg-wrapper2"></div>
               </div>
-              <% }); %>
+              < % }); %> -->
 
 
           </div>
@@ -284,19 +295,22 @@
 
         <div id="FAQ" class="row">
           <div class="col-12">
-            <div class="tm-bg-darker-blue-transparent" itemscope itemtype="https://schema.org/FAQPage">
+
+            <!-- <div class="tm-bg-darker-blue-transparent" itemscope itemtype="https://schema.org/FAQPage">
               <h2>FAQ</h2>
         
-              <% faq_fr.forEach(function(faq) { %>
+              < % faq_fr.forEach(function(faq) { %>
                 <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                  <summary itemprop="name"><%= faq.id %>. <%= faq.question %></summary>
+                  <summary itemprop="name">< %= faq.id %>. < %= faq.question %></summary>
                   <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <span itemprop="text"><%= faq.answer %></span>
+                    <span itemprop="text">< %= faq.answer %></span>
                   </div>
                 </details>
-              <% }); %>
+              < % }); %>
         
-            </div>
+            </div> -->
+
+
           </div>
         </div>
         

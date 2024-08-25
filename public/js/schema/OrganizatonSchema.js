@@ -21,7 +21,7 @@ const organizationSchema = {
     "contactType": "Customer Service",
     "areaServed": "CA",
     "availableLanguage": "English",
-    "url": `${business_data_fr.website_main_url}/demande-de-devis-gratuit`
+    "url": `${business_data_fr.website_main_url}/contact`
   },
   "address": {
     "@type": "PostalAddress",

@@ -5,16 +5,10 @@ nav#top {
   flex-direction: row;
   align-items: center;
   border-radius: 10px 10px 0 0;
-  /* background-color: #4773ba; */
-  /* background-color: rgba(0, 0, 0, 0.5); */
 
-  /* Here@ */
-  /* background-color: rgb(0, 123, 255, 0.7); */
-  /* background-color: rgb(85, 164, 255); */
-  /* background-color: rgb(77, 77, 77); */
 
-  border-bottom: 2px solid #fdfdfd;
-  background-color: #303030;
+  border-bottom: 2px solid #000000;
+  background-color: #ffffff;
 
   /* background-image: url('../img/svg/wave_nav.svg');
   background-repeat: repeat;
@@ -52,23 +46,24 @@ nav#top>a:not(:first-of-type)>img:hover {
   /* content: url('/img/icons/second_red.svg'); */
 }
 
-nav#top>a:link {
-  color: white;
-}
-
-
+nav#top>a:link,
 nav#top>a:visited {
-  color: white;
+  color: rgb(0, 0, 0);
 }
+
+
+/* nav#top>a:visited {
+  color: white;
+} */
 
 
 nav#top>a:link:active,
 nav#top>a:visited:active {
-  color: rgb(224, 4, 4);
+  color: rgb(121, 121, 121);
 }
 
 nav#top>a:hover {
-  color: orange;
+  color: red;
 }
 
 

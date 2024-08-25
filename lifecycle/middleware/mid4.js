@@ -36,7 +36,7 @@ async function mid1(req, res, next) {
 
 
 
-  console.log('\n(0)->', res.locals.req_path)
+  // console.log('\n(0)->', res.locals.req_path)
 
 
   const all_data_per_page_fr = await db.all_data_per_page_fr.findOne({
@@ -67,7 +67,7 @@ async function mid1(req, res, next) {
 
 
   // console.log(nav_fr, welcome_section_fr, business_data_fr, all_data_per_page_fr)
-  console.log(welcome_section_fr)
+  // console.log(welcome_section_fr)
 
 
 

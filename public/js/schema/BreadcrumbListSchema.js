@@ -19,7 +19,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
   // Static breadcrumb items
   let staticItems = [
     { name: "##", item: "https://pavagegatineau.com/" },
-    { name: "Request Free Quote", item: "https://pavagegatineau.com/demande-de-devis-gratuit" },
+    { name: "Request Free Quote", item: "https://pavagegatineau.com/contact" },
     { name: "Organisation", item: "https://pavagegatineau.com/organisation" },
     { name: "À propos", item: "https://pavagegatineau.com/a-propos" },
     { name: "Plan du site", item: "https://pavagegatineau.com/plan-du-site" },

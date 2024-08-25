@@ -58,7 +58,7 @@
             
             <ul>
               <li><a href="/">Pavage, l'asphalte et le béton résidentiel et commercial à Gatineau</a></li>
-              <li><a href="/demande-de-devis-gratuit">Demande de devis gratuit</a></li>
+              <li><a href="/contact">Contact</a></li>
               <li><a href="/organisation">Organisation</a></li>
               <li><a href="/a-propos">À propos</a></li>
 
@@ -72,12 +72,12 @@
                 <ul>
 
                   <% main_service_data_fr.forEach(function(service) { %>
-                    <li><a href="/service/<%= service.slug %>"><%= service.service_name %></a></li>
+                    <li><a href="/seo/<%= service.slug %>"><%= service.service_name %></a></li>
                   <% }); %>
 
 
                   <% extra_service_pages_fr.forEach(function(page) { %>
-                    <li><a href="/service/<%= page.slug %>"><%= page.title %></a></li>
+                    <li><a href="/seo/<%= page.slug %>"><%= page.title %></a></li>
                   <% }); %>
                 </ul>
               </li>

@@ -116,7 +116,7 @@ app.get('/', middleware1.mid1, async (req, res) => {
   // return next(error)
 
 
-  return res.render('index3', { ...res.locals.index_page_data });
+  return res.render('index', { ...res.locals.index_page_data });
 });
 
 
@@ -130,9 +130,9 @@ app.get('/', middleware1.mid1, async (req, res) => {
 
 
 
-app.get('/demande-de-devis-gratuit', middleware2.mid1, async (req, res) => {
+app.get('/contact', middleware2.mid1, async (req, res) => {
 
-  return res.render('demande-de-devis-gratuit', { ...res.locals.index_page_data });
+  return res.render('contact', { ...res.locals.index_page_data });
 });
 
 
@@ -166,27 +166,56 @@ app.get('/a-propos', middleware3.mid1, (req, res) => {
 
 
 
+app.get(['/seo/drywall-kingston', '/seo/earnanswers', '/seo/bidblock'], middleware4.mid1, async (req, res) => {
 
-app.get('/service/pavage-residentiel-et-commercial-a-gatineau', middleware4.mid1, (req, res) => {
-  return res.render('pavage-residentiel-et-commercial', { ...res.locals.index_page_data });
+  // return res.render('pavage-residentiel-et-commercial', { ...res.locals.index_page_data });
+
+  const requestedSlug = req.path.split('/').pop(); // This will give 'drywall-kingston', 'earnanswers', or 'bidblock'
+
+
+  const main_service_data_fr = await db.main_service_data_fr.findOne({
+    where: { slug: requestedSlug }, // Match the requested slug
+    raw: true
+  });
+
+  if (!main_service_data_fr) {
+    const error = new Error("No main_service_data_fr found!")
+    return next(error)
+  }
+
+
+
+  console.log(main_service_data_fr)
+
+
+  res.locals.index_page_data = {
+    ...res.locals.index_page_data,
+    ...(main_service_data_fr ? { main_service_data_fr: main_service_data_fr } : {})
+  }
+
+  return res.render('drywall-kingston', { ...res.locals.index_page_data });
 });
 
 
 
 
 
-app.get('/service/revetement-maintenance-en-asphalte-gatineau', middleware4.mid1, (req, res) => {
-  return res.render('revetement-en-asphalte', { ...res.locals.index_page_data });
-});
+
+
+// app.get('/seo/earnanswers', middleware4.mid1, (req, res) => {
+//   // return res.render('revetement-en-asphalte', { ...res.locals.index_page_data });
+//   return res.render('earnanswers', { ...res.locals.index_page_data });
+// });
 
 
 
 
 
 
-app.get('/service/travaux-en-beton-residentiel-et-commercial-a-gatineau', middleware4.mid1, (req, res) => {
-  return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
-});
+// app.get('/seo/bidblock', middleware4.mid1, (req, res) => {
+//   // return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
+//   return res.render('bidblock', { ...res.locals.index_page_data });
+// });
 
 
 
@@ -198,7 +227,7 @@ app.get('/service/travaux-en-beton-residentiel-et-commercial-a-gatineau', middle
 
 
 
-app.get('/service/:page_de_services_supplementaires_seo', middleware4.mid1, async (req, res, next) => {
+app.get('/seo/:page_de_services_supplementaires_seo', middleware4.mid1, async (req, res, next) => {
 
   const now = new Date()
 
@@ -700,7 +729,7 @@ app.get('/sitemap/xml-sitemap', async (req, res, next) => {
       priority: 1
     },
     {
-      URL: '/demande-de-devis-gratuit',
+      URL: '/contact',
       lastmod: last_modified_1_date,
       changefreq: "monthly",
       priority: 1
@@ -746,7 +775,7 @@ app.get('/sitemap/xml-sitemap', async (req, res, next) => {
 
   main_services_data_fr.forEach(main_service_data_fr => {
 
-    let url = `/service/${main_service_data_fr.slug}`;
+    let url = `/seo/${main_service_data_fr.slug}`;
 
     // console.log(main_service_data_fr.last_modified)
     let lastmod = new Date(main_service_data_fr.last_modified)
@@ -783,7 +812,7 @@ app.get('/sitemap/xml-sitemap', async (req, res, next) => {
 
   extra_service_pages_fr.forEach(extra_service_page_fr => {
 
-    let url = `/service/${extra_service_page_fr.slug}`;
+    let url = `/seo/${extra_service_page_fr.slug}`;
 
     // console.log(extra_service_page_fr.last_modified)
     let lastmod = new Date(extra_service_page_fr.last_modified)

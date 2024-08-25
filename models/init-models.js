@@ -5,7 +5,7 @@ var _blog_page_fr = require("./blog_page_fr");
 var _business_data_fr = require("./business_data_fr");
 var _category_fr = require("./category_fr");
 var _category_page_fr = require("./category_page_fr");
-var _demande_de_devis_gratuit_fr = require("./demande_de_devis_gratuit_fr");
+var _contact_fr = require("./contact_fr");
 var _extra_service_page_fr = require("./extra_service_page_fr");
 var _faq_fr = require("./faq_fr");
 var _footer_fr = require("./footer_fr");
@@ -24,7 +24,7 @@ function initModels(sequelize) {
   var business_data_fr = _business_data_fr(sequelize, DataTypes);
   var category_fr = _category_fr(sequelize, DataTypes);
   var category_page_fr = _category_page_fr(sequelize, DataTypes);
-  var demande_de_devis_gratuit_fr = _demande_de_devis_gratuit_fr(sequelize, DataTypes);
+  var contact_fr = _contact_fr(sequelize, DataTypes);
   var extra_service_page_fr = _extra_service_page_fr(sequelize, DataTypes);
   var faq_fr = _faq_fr(sequelize, DataTypes);
   var footer_fr = _footer_fr(sequelize, DataTypes);
@@ -46,7 +46,7 @@ function initModels(sequelize) {
     business_data_fr,
     category_fr,
     category_page_fr,
-    demande_de_devis_gratuit_fr,
+    contact_fr,
     extra_service_page_fr,
     faq_fr,
     footer_fr,
