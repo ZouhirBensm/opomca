@@ -5,14 +5,14 @@
 <head>
 
   <%- include('head/setup-pre-variables.ejs') %>
-  
-  <%- include('head/load-backend-variables/variables.ejs') %>
-  
-  <%- include('head/head-common-part1.ejs') %>
-  
-  <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
-  
-  <%- include('head/css-loader/css.ejs') %>
+
+    <%- include('head/load-backend-variables/variables.ejs') %>
+
+      <%- include('head/head-common-part1.ejs') %>
+
+        <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
+
+          <%- include('head/css-loader/css.ejs') %>
 
 </head>
 
@@ -23,39 +23,41 @@
   <%- include('body/nav.ejs') %>
 
 
-  <!-- Welcome Section -->
-  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="<%= welcome_section_fr.banner_img_path %>"
-    alt="<%= welcome_section_fr.banner_img_alt %>">
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll"
+      data-image-src="<%= welcome_section_fr.banner_img_path %>" alt="<%= welcome_section_fr.banner_img_alt %>">
 
-    <%- include('body/welcome-section/part1.ejs') %>
+      <%- include('body/welcome-section/part1.ejs') %>
 
-    <div class="tm-bg-black-transparent tm-welcome-container">
-      <div class="container-fluid">
+        <div class="tm-bg-black-transparent tm-welcome-container">
+          <div class="container-fluid">
 
 
-        <div class="row h-100">
+            <div class="row h-100">
 
-          <%- include('body/welcome-section/part2.ejs') %>
+              <%- include('body/welcome-section/part2.ejs') %>
 
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Welcome section -->
+    </section>
+    <!-- End Welcome section -->
 
 
 
 
 
-  <!-- Portfolio section -->
-  <section id="tmPortfolio">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
 
-          <div>
-            <h2 class="category-template"><%= category_fr.category_name %></h2>
-            <h3>Blog Postings</h3>
+            <div>
+              <h2 class="category-template">
+                <%= category_fr.category_name %>
+              </h2>
+              <h3>Blog Postings</h3>
 
 
               <ul>
@@ -65,18 +67,18 @@
                       <%= blog.title %>
                     </a>
                   </li>
-                <% }); %>
+                  <% }); %>
               </ul>
             </div>
 
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
 
-  <%- include('footer/footer.ejs') %>
+    <%- include('footer/footer.ejs') %>
 
 
 

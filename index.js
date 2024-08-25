@@ -202,22 +202,6 @@ app.get(['/seo/drywall-kingston', '/seo/earnanswers', '/seo/bidblock'], middlewa
 
 
 
-// app.get('/seo/earnanswers', middleware4.mid1, (req, res) => {
-//   // return res.render('revetement-en-asphalte', { ...res.locals.index_page_data });
-//   return res.render('earnanswers', { ...res.locals.index_page_data });
-// });
-
-
-
-
-
-
-// app.get('/seo/bidblock', middleware4.mid1, (req, res) => {
-//   // return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
-//   return res.render('bidblock', { ...res.locals.index_page_data });
-// });
-
-
 
 
 
@@ -649,7 +633,7 @@ app.get('/plan-du-site', middleware4.mid1, async (req, res, next) => {
 
 
 
-  console.log("\n\nres.locals.index_page_data -> \n\n", res.locals.index_page_data)
+  // console.log("\n\nres.locals.index_page_data -> \n\n", res.locals.index_page_data)
 
 
 
@@ -704,7 +688,7 @@ app.get('/tiroir1/politique-de-confidentialite', middleware4.mid1, (req, res) =>
 
 
 
-app.get('/sitemap/xml-sitemap', async (req, res, next) => {
+app.get('/sitemap/sitemap-1', async (req, res, next) => {
   // Define the path to the XML file
   const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
@@ -874,7 +858,10 @@ app.get('/sitemap/xml-sitemap', async (req, res, next) => {
 
   });
 
-  // console.log(urls)
+
+
+
+  console.log("\n\n\n", urls, "\n\n\n")
 
   const xml = createSiteMap(urls);
 
@@ -883,7 +870,8 @@ app.get('/sitemap/xml-sitemap', async (req, res, next) => {
 
   // return res.render('sitemap');
   // return res.sendFile('sitemap.html', { root: 'public' });
-  return res.redirect(301, '/plan-du-site');
+  // return res.redirect(301, '/plan-du-site');
+  return res.end()
 });
 
 
