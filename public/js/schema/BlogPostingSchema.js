@@ -1,4 +1,4 @@
-// console.log('(1) => ', business_data_fr)
+// console.log(blogData, business_data_fr)
 
 
 
@@ -18,6 +18,7 @@ const blogPostingSchema = {
   "articleBody": stripHTML(blogData.html_content),
   "datePublished": blogData.datetime_published,
   "dateModified": blogData.datetime_edited,
+  "inLanguage": blogData.lang,
   "author": {
     "@type": "Organization",
     "url": `${business_data_fr.website_main_url}/organisation`
@@ -31,7 +32,6 @@ const blogPostingSchema = {
     }
   }
 };
-
 
 
 

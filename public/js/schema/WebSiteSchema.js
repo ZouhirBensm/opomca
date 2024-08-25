@@ -1,4 +1,4 @@
-// console.log(business_data_fr);
+console.log(business_data_fr);
 
 const websiteSchema = {
   "@context": "https://schema.org",

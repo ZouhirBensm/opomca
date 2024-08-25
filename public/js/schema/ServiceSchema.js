@@ -1,4 +1,4 @@
-// console.log(review_data_fr);
+// console.log("(1)", review_data_fr,"(2)", main_service_data_fr,"(3)", business_data_fr);
 
 
 const priceCurrency = "CAD"

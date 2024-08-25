@@ -1,8 +1,8 @@
 // console.log(blog_elements_fr);
+// console.log('\n\n')
 // console.log(main_service_data_fr); // main services
+// console.log('\n\n')
 // console.log(extra_service_pages_fr); // extra services
-
-
 
 
 
@@ -18,16 +18,16 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
 
   // Static breadcrumb items
   let staticItems = [
-    { name: "##", item: "https://pavagegatineau.com/" },
-    { name: "Request Free Quote", item: "https://pavagegatineau.com/contact" },
-    { name: "Organisation", item: "https://pavagegatineau.com/organisation" },
-    { name: "À propos", item: "https://pavagegatineau.com/a-propos" },
-    { name: "Plan du site", item: "https://pavagegatineau.com/plan-du-site" },
-    { name: "Avertissement légal", item: "https://pavagegatineau.com/tiroir1/avertissement-legal" },
-    { name: "Politique de confidentialité", item: "https://pavagegatineau.com/tiroir1/politique-de-confidentialite" },
-    // { name: "Service name 1", item: "https://pavagegatineau.com/service/service1" },
-    // { name: "Service name 2", item: "https://pavagegatineau.com/service/service2" },
-    // { name: "Service name 3", item: "https://pavagegatineau.com/service/service3" }
+    { name: "##", item: "https://opom.ca/" },
+    { name: "Request Free Quote", item: "https://opom.ca/contact" },
+    { name: "Organisation", item: "https://opom.ca/organisation" },
+    { name: "À propos", item: "https://opom.ca/a-propos" },
+    { name: "Plan du site", item: "https://opom.ca/plan-du-site" },
+    { name: "Avertissement légal", item: "https://opom.ca/tiroir1/avertissement-legal" },
+    { name: "Politique de confidentialité", item: "https://opom.ca/tiroir1/politique-de-confidentialite" },
+    // { name: "Service name 1", item: "https://opom.ca/seo/service1" },
+    // { name: "Service name 2", item: "https://opom.ca/seo/service2" },
+    // { name: "Service name 3", item: "https://opom.ca/seo/service3" }
   ];
 
   // Generate service breadcrumb items from service data
@@ -63,7 +63,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
       "@type": "ListItem",
       "position": staticItems.length + index + 1,
       "name": page.title,
-      "item": `https://drywallkingston.com/service/${page.slug}`
+      "item": `https://opom.ca/seo/${page.slug}`
     });
   });
 
@@ -75,7 +75,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
       "@type": "ListItem",
       "position": staticItems.length + servicePages.length + index + 1,
       "name": element.title,
-      "item": `https://drywallkingston.com/blog/${element.category.slug}/blog-posting/${element.slug}`
+      "item": `https://opom.ca/blog/${element.category.slug}/blog-posting/${element.slug}`
     });
   });
 
@@ -100,7 +100,7 @@ script3.type = 'application/ld+json';
 const breadcrumbListSchema = generateBreadcrumbListSchema(blog_elements_fr, extra_service_pages_fr);
 
 
-console.log("\n(1)->\n", breadcrumbListSchema, "\n\n");
+// console.log("\n(1)->\n", breadcrumbListSchema, "\n\n");
 // console.log("\n(2)->\n",JSON.stringify(breadcrumbListSchema, null, 2), "\n\n");
 
 

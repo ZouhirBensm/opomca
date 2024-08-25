@@ -70,6 +70,10 @@ app.use((req, res, next) => {
   res.locals.fullUrl = fullUrl
 
 
+  const now = new Date()
+  console.log(now)
+
+
   return next()
 });
 
@@ -481,7 +485,7 @@ app.get('/blog/:category/blog-posting/:title', middleware4.mid1, async (req, res
   });
 
 
-  // console.log('\n\n(1)-> ', blog_element_fr, '\n\n')
+  console.log('\n\n(1)-> ', blog_element_fr, '\n\n')
 
 
   if (!blog_element_fr) {

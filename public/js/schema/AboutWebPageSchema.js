@@ -1,3 +1,5 @@
+// console.log(all_data_per_page_fr, business_data_fr)
+
 const aboutWebPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -14,7 +16,7 @@ const aboutWebPageSchema = {
 const script1 = document.createElement('script');
 script1.type = 'application/ld+json';
 
-console.log(aboutWebPageSchema)
+// console.log(aboutWebPageSchema)
 const text1 = JSON.stringify(aboutWebPageSchema)
 
 // console.log("aboutWebPageSchema:" ,text1)
