@@ -1,5 +1,5 @@
 
-name: drywallkingston.com Continuous Integration
+name: opom.ca Continuous Integration
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  drywallkingstoncom_Automated_Deployment_Process:
+  opomca_Automated_Deployment_Process:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
       with:
         ref: ${{ github.ref }}
 
-    - name: Syncing development with prod environment Drywall Kingston
+    - name: Syncing development with prod environment Opom Canada
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SERVER_HOSTNAME }}
