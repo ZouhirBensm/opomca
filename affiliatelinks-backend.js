@@ -305,6 +305,13 @@ affiliateLinks_app_router.get('/thirty-one', (req,res)=>{
 
 
 
+// https://opom.ca/ral/thirty-two
+affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
+})
+
+
+
 
 
 
