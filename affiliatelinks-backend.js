@@ -1,3 +1,5 @@
+const middleware4 = require('./lifecycle/middleware/mid4')
+
 // Router towards /ral
 const express = require('express')
 const affiliateLinks_app_router = express.Router()
@@ -306,11 +308,16 @@ affiliateLinks_app_router.get('/thirty-one', (req,res)=>{
 
 
 // https://opom.ca/ral/thirty-two
-affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
-  return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
+// affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
+//   return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
+// })
+
+
+// https://opom.ca/ral/thirty-two
+// http://localhost:3004/ral/thirty-two
+affiliateLinks_app_router.get('/thirty-two', middleware4.mid1, (req,res)=>{
+  return res.render('temporal-micro-workers', { ...res.locals.index_page_data });
 })
-
-
 
 
 
