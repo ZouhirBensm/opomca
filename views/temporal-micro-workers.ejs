@@ -147,11 +147,11 @@
               <br/><br/>
 
 
-              <h2 class="tm-text-orange">Comment</h2>
+              <h2 class="tm-text-orange">Review</h2>
 
               <div id="swapped">
                 <!-- Trigger/Open The Modal -->
-                <button id="openModalBtn">Write a comment</button>
+                <button id="openModalBtn">Write a review</button>
 
                 <!-- The Modal -->
                 <!-- <dialog id="myModal">
@@ -162,7 +162,7 @@
 
                 <!-- The Modal -->
                 <dialog id="myModal">
-                  <!-- <p>Please rate:</p>
+                  <p>Please rate:</p>
                   <div class="star-rating">
                     <input type="radio" id="star5" name="rating" value="5">
                     <label for="star5">★</label>
@@ -174,9 +174,9 @@
                     <label for="star2">★</label>
                     <input type="radio" id="star1" name="rating" value="1">
                     <label for="star1">★</label>
-                  </div> -->
+                  </div>
                   <input class="review-input" placeholder="Write your name here..." />
-                  <textarea class="review-input" placeholder="Write your comment here..."></textarea>
+                  <textarea class="review-input" placeholder="Write your review here..."></textarea>
                   <div class="button-container">
                     <button id="postReviewBtn">Post</button>
                     <button id="closeModalBtn">Close</button>
@@ -211,7 +211,7 @@
 
               postReviewBtn.addEventListener('click', () => {
                 myModal.close(); // Close the modal
-                swappedDiv.innerHTML = '<p style="color: green;">Thanks for your comment!</p>';
+                swappedDiv.innerHTML = '<p style="color: green;">Thanks for your review!</p>';
 
               });
 
