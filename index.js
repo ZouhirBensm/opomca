@@ -64,6 +64,7 @@ app.use((req, res, next) => {
   // console.log(req_path, req_url)
 
   res.locals.req_path = req_path
+  res.locals.req_url = req_url
 
 
   const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;

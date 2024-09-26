@@ -144,14 +144,24 @@
   
     
 
-<% } else if (req_path === '/ral/thirty-two') { %>
+<% } else if (req_path === '/ral/thirty-two' || req_path === '/ral/thirty-three') { %>
 
 
   <title><%= all_data_per_page_fr.title %></title>
   <meta name="title" content="<%= all_data_per_page_fr.title %>">
   <meta name="description"
     content="<%= all_data_per_page_fr.meta_description %>">
-  <link rel="canonical" href='/ral/thirty-two'>
+  <link rel="canonical" href='<%= locals.req_url %>'>
+  
+    
+<!-- < % } else if (req_path === '/ral/thirty-three') { %>
+
+
+  <title>< %= all_data_per_page_fr.title %></title>
+  <meta name="title" content="< %= all_data_per_page_fr.title %>">
+  <meta name="description"
+    content="< %= all_data_per_page_fr.meta_description %>">
+  <link rel="canonical" href='/ral/thirty-three'> -->
   
     
 
