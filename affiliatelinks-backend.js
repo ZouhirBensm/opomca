@@ -328,14 +328,14 @@ affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
 
 // https://opom.ca/ral/thirty-three
 // http://localhost:3005/ral/thirty-three
-affiliateLinks_app_router.get('/thirty-three', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-drywallkingston', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-three', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-drywallkingston', { ...res.locals.index_page_data });
+// })
 
 // https://opom.ca/ral/thirty-three
-// affiliateLinks_app_router.get('/thirty-three', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/fqDiHgcp7ZynYCYC8');
-// })
+affiliateLinks_app_router.get('/thirty-three', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/fqDiHgcp7ZynYCYC8');
+})
 
 
 
