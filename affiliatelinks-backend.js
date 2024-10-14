@@ -313,14 +313,14 @@ affiliateLinks_app_router.get('/thirty-one', (req,res)=>{
 
 // https://opom.ca/ral/thirty-two
 // http://localhost:3005/ral/thirty-two
-affiliateLinks_app_router.get('/thirty-two', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-pavagegatineau', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-two', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-pavagegatineau', { ...res.locals.index_page_data });
+// })
 
 // https://opom.ca/ral/thirty-two
-// affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
-// })
+affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
+})
 
 
 
@@ -341,14 +341,14 @@ affiliateLinks_app_router.get('/thirty-three', middleware4.mid1, (req,res)=>{
 
 // https://opom.ca/ral/thirty-four
 // http://localhost:3005/ral/thirty-four
-affiliateLinks_app_router.get('/thirty-four', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-earnanswers', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-four', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-earnanswers', { ...res.locals.index_page_data });
+// })
 
 // https://opom.ca/ral/thirty-four
-// affiliateLinks_app_router.get('/thirty-four', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/8Hn3WtWRRSBT4JTi6');
-// })
+affiliateLinks_app_router.get('/thirty-four', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/8Hn3WtWRRSBT4JTi6');
+})
 
 
 
