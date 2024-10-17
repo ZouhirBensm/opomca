@@ -486,8 +486,13 @@ app.get('/blog/:category/blog-posting/:title', middleware4.mid1, async (req, res
   });
 
 
-  console.log('\n\n(1)-> ', blog_element_fr, '\n\n')
+  
+  console.log('\n\n(1)-> ', blog_element_fr.has_equ, '\n\n');
 
+  // Read the first byte of the existing Buffer directly
+  blog_element_fr.has_equ = Boolean(blog_element_fr.has_equ.readUInt8(0));
+  
+  console.log('\n\n(2)-> ', blog_element_fr.has_equ, '\n\n');
 
   if (!blog_element_fr) {
     const error = new Error("No blog element found!")

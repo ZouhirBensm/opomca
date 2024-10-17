@@ -18,6 +18,12 @@
   <%- include('head/schema-loader/schema.ejs') %>
 
   <%- include('head/code-element/code-highlight.ejs') %>
+
+  <% if (blogData.has_equ === true) { %>
+    <%- include('head/math-equation-render/math-equations.ejs') %>
+  <% } %>
+  
+
 </head>
 
 
