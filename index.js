@@ -885,7 +885,16 @@ app.get('/sitemap/sitemap-1', async (req, res, next) => {
   // return res.render('sitemap');
   // return res.sendFile('sitemap.html', { root: 'public' });
   // return res.redirect(301, '/plan-du-site');
-  return res.end()
+
+  // Set cache-control headers to prevent caching
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  res.set('Surrogate-Control', 'no-store');
+
+
+  // return res.end()
+  return res.redirect(301, '/plan-du-site');
 });
 
 
