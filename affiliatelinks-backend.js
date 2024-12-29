@@ -355,15 +355,15 @@ affiliateLinks_app_router.get('/thirty-four', (req,res)=>{
 
 
 // https://opom.ca/ral/thirty-five
-affiliateLinks_app_router.get('/thirty-five', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-pavagelaval', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-five', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-pavagelaval', { ...res.locals.index_page_data });
+// })
 
 
 // https://opom.ca/ral/thirty-five
-// affiliateLinks_app_router.get('/thirty-five', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/9aSpXFqxeyWH7fgs9');
-// })
+affiliateLinks_app_router.get('/thirty-five', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/9aSpXFqxeyWH7fgs9');
+})
 
 
 
