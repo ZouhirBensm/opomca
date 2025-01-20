@@ -341,14 +341,14 @@ affiliateLinks_app_router.get('/thirty-three', (req,res)=>{
 
 // https://opom.ca/ral/thirty-four
 // http://localhost:3005/ral/thirty-four
-// affiliateLinks_app_router.get('/thirty-four', middleware4.mid1, (req,res)=>{
-//   return res.render('temporal-micro-workers-earnanswers', { ...res.locals.index_page_data });
-// })
+affiliateLinks_app_router.get('/thirty-four', middleware4.mid1, (req,res)=>{
+  return res.render('temporal-micro-workers-earnanswers', { ...res.locals.index_page_data });
+})
 
 // https://opom.ca/ral/thirty-four
-affiliateLinks_app_router.get('/thirty-four', (req,res)=>{
-  return res.redirect('https://maps.app.goo.gl/8Hn3WtWRRSBT4JTi6');
-})
+// affiliateLinks_app_router.get('/thirty-four', (req,res)=>{
+//   return res.redirect('https://maps.app.goo.gl/8Hn3WtWRRSBT4JTi6');
+// })
 
 
 
