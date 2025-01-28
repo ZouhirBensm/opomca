@@ -148,16 +148,18 @@ h3 {
 }
 
 h1.tm-brand-name.long-title {
-  font-size: 2.2rem;
+  font-size: 1.3rem;
+}
+
+
+.tm-brand-description {
+  font-size: 1.2rem;
 }
 
 span.tm-brand-name {
   font-size: 2.2rem;
 }
 
-.tm-brand-description {
-  font-size: 1.4rem;
-}
 
 .parallax-window {
   min-height: 1100px;
@@ -175,12 +177,12 @@ span.tm-brand-name {
   background-size: cover;
 
 
-  min-height: 400px;
+  /* min-height: 400px; */
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   align-items: stretch;
 }
 
@@ -222,6 +224,7 @@ span.tm-brand-name {
   
   padding-bottom: 80px;
   /* padding-bottom: 80px; */
+  /* margin: 0 7px; */
 
 }
 
@@ -247,7 +250,7 @@ span.tm-brand-name {
 }
 
 .tm-extra-service-description {
-  padding: 20px 45px;
+  /* padding: 20px 45px; */
 }
 
 .tm-portfolio-description h3 {
@@ -418,6 +421,15 @@ p {
     margin-left: auto;
     margin-right: auto;
   } */
+
+  h1.tm-brand-name.long-title {
+    font-size: 1rem;
+  }
+
+
+  .tm-brand-description {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 730px) {
@@ -437,12 +449,34 @@ p {
   .tm-portfolio-description {
     padding: 20px 30px;
   }
+
+  h1.tm-brand-name.long-title {
+    font-size: .8rem;
+  }
+
+
+  .tm-brand-description {
+    font-size: .8rem;
+  }
+
 }
 
 @media (max-width: 572px) {
   .tm-brand-container {
-    padding: 45px;
+    /* padding: 45px; */
+    font-size: .1rem
   }
+
+  
+  h1.tm-brand-name.long-title {
+    font-size: .7rem;
+  }
+
+
+  .tm-brand-description {
+    font-size: .7rem;
+  }
+
 }
 
 @media (max-width: 443px) {
@@ -450,7 +484,5 @@ p {
     font-size: 1.5rem;
   }
 
-  .tm-brand-container {
-    padding: 25px;
-  }
+
 }
