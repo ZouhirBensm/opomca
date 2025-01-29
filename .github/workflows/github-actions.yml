@@ -25,12 +25,16 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         script: |
           cd opomca
-          rm package-lock.json
-          rm -r node_modules
-          rm -r ./miscellaneous/db/dump.txt
+          rm -f package-lock.json
+          rm -rf node_modules
+          rm -rf ./miscellaneous/db/dump.txt
           chmod -R 755 models
           rm -rf ./models/*
-          git pull https://${{ secrets.GITHUUB_USERNAME }}:${{ secrets.GITHUUB_PASSWORD }}@github.com/${{ secrets.GITHUUB_USERNAME }}/opomca.git master
+          git fetch origin master
+          git merge --strategy=recursive --strategy-option=theirs origin/master || echo "Merge failed, resolving manually"
+          git add .
+          git commit -m "Merge conflicts resolved (using 'theirs' strategy)" || echo "No conflicts to commit"
+          git pull https://${{ secrets.GITHUUB_USERNAME }}:${{ secrets.GITHUUB_PASSWORD }}@github.com/${{ secrets.GITHUUB_USERNAME }}/earnanswers.git master --strategy=recursive --strategy-option=theirs
           npm install
           mysql -u ${{ secrets.DB_USERNAME }} -p${{ secrets.DB_USERPASSWORD }} ${{ secrets.DB_NAME }} < ./miscellaneous/db/dump.txt
           sequelize-auto -o \"./models\" -d ${{ secrets.DB_NAME }} -h ${{ secrets.DB_HOST }} -u ${{ secrets.DB_USERNAME }} -p ${{ secrets.DB_PORT }} -x ${{ secrets.DB_USERPASSWORD }} -e mysql
