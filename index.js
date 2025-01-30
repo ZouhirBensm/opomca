@@ -93,10 +93,20 @@ const data_error_handler_controller = require('./lifecycle/controller/error-cont
 
 // For SEO Keep until google identifies that the pages are gone
 const goneUrls = [
-  "/some/url/path"
+  "/seo/citation-listing-identifier/drywall-kingston/1",
+  "/blog/artificial-intelligence/blog-posting/chapter2/datasets/dating/copies5",
+  "/blog/artificial-intelligence/blog-posting/chapter2/datasets/dating/copies6",
+  "/blog/artificial-intelligence/blog-posting/chapter2/data2/test/dating_model.pkl",
+  "/blog/artificial-intelligence/blog-posting/chapter2/datasets/dating/copies4",
+  "/Users/Zouhir/Documents/UQO_AUT2024/INF6333_code/book_aurelien_geron/chapter2/datasets/dating/copies",
+  "/Users/Zouhir/Documents/UQO_AUT2024/INF6333_code/book_aurelien_geron/chapter2/datasets/dating/step1_male_straight_data.csv",
+  "/seo/citation-listing-identifier/bidblock/1",
+  "/seo/citation-listing-identifier/earnanswers/1",
+  "/seo/citation-listing-identifier/drywall-kingston/1",
+  "/seo/citation-listing-identifier/bidblock/1",
+  "/tiroir1/avertissement-legal",
+  "/seo/citation-listing-identifier/earnanswers/1",
 ];
-
-
 
 
 
