@@ -10,7 +10,7 @@ function stripHTML(html) {
   return tmp.textContent || tmp.innerText || "";
 }
 
-const blogPostingSchema = {
+const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": blogData.title,
@@ -37,11 +37,11 @@ const blogPostingSchema = {
 
 
 
-const scriptElement = document.createElement('script');
-scriptElement.type = 'application/ld+json';
+const scriptElement2 = document.createElement('script');
+scriptElement2.type = 'application/ld+json';
 
 // console.log("\n\nblogPostingSchema -> ", blogPostingSchema)
 
 
-scriptElement.text = JSON.stringify(blogPostingSchema);
-document.head.appendChild(scriptElement);
+scriptElement2.text = JSON.stringify(articleSchema);
+document.head.appendChild(scriptElement2);
