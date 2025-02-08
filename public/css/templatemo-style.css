@@ -253,6 +253,13 @@ span.tm-brand-name {
   /* padding: 20px 45px; */
 }
 
+
+div#content-template {
+  padding-top: 30px;
+}
+
+
+
 .tm-portfolio-description h3 {
   margin-bottom: 20px;
 }
