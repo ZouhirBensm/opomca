@@ -268,26 +268,16 @@ div#content-template {
   color: #98cb00;
 }
 
-.tm-text-orange {
-  color: #cc6733;
-}
-
-.tm-text-light-orange {
-  color: orange;
-}
 
 .tm-text-blue {
   color: #007bff;
   letter-spacing: 1px;
 }
 
-.tm-text-orange {
-  color: orange;
-  letter-spacing: 1px;
-}
+
 
 a {
-  color: orange;
+  color: red;
 }
 
 a:hover {

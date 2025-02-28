@@ -104,11 +104,11 @@ body > footer nav#bottom > a:visited {
 
 body > footer nav#bottom > a:link:active,
 body > footer nav#bottom > a:visited:active {
-  color: orange
+  color: red
 }
 
 body > footer nav#bottom > a:hover {
-  color: orange;
+  color: red;
 }
 
 

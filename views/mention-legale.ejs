@@ -4,17 +4,17 @@
 
 <head>
   <%- include('head/setup-pre-variables.ejs') %>
-  
-  <!-- < %- include('head/load-backend-variables/variables.ejs') %> -->
-  
-  <%- include('head/head-common-part1.ejs') %>
-  
-  <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
-  
-  <%- include('head/css-loader/css.ejs') %>
 
-  <meta name="googlebot" content="noindex">
-  <meta name="robots" content="noindex">
+    <!-- < %- include('head/load-backend-variables/variables.ejs') %> -->
+
+    <%- include('head/head-common-part1.ejs') %>
+
+      <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
+
+        <%- include('head/css-loader/css.ejs') %>
+
+          <meta name="googlebot" content="noindex">
+          <meta name="robots" content="noindex">
 
 </head>
 
@@ -27,149 +27,128 @@
   <%- include('body/nav.ejs') %>
 
 
-  <!-- Welcome Section -->
-  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="<%= welcome_section_fr.banner_img_path %>"
-    alt="<%= welcome_section_fr.banner_img_alt %>">
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll"
+      data-image-src="<%= welcome_section_fr.banner_img_path %>" alt="<%= welcome_section_fr.banner_img_alt %>">
 
-    <%- include('body/welcome-section/part1.ejs') %>
+      <%- include('body/welcome-section/part1.ejs') %>
 
-    <div class="tm-bg-black-transparent tm-welcome-container">
+        <div class="tm-bg-black-transparent tm-welcome-container">
+          <div class="container-fluid">
+
+
+            <div class="row h-100">
+
+              <%- include('body/welcome-section/part2.ejs') %>
+
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- End Welcome section -->
+
+
+
+
+
+
+
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
       <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+
+            <div class="tm-extra-service-description">
+
+              <header>
+                <h1>Legal Notice</h1>
+                <p>This page outlines the legal notice for Opom Canada, a web publisher and business directory
+                  for Canadian businesses.</p>
+              </header>
+
+              <section>
+                <h2>Introduction</h2>
+                <p>Welcome to Opom Canada! We provide high-quality web publishing services and offer a
+                  fully operational business directory for Canadian businesses. By accessing our website, you agree to
+                  comply with the
+                  following legal terms and conditions. Please read this legal notice carefully.</p>
+              </section>
+
+              <section>
+                <h2>Legal Information</h2>
+                <p><strong>Business Name:</strong> Opom Canada</p>
+                <p><strong>Website:</strong> <a href="<%= locals.index_page_data.business_data_fr.website_main_url %>">
+                    <%= locals.index_page_data.business_data_fr.website_main_url %>
+                  </a></p>
+                <p><strong>Registered Address:</strong>
+                  <%= locals.index_page_data.business_data_fr.street_address %>, <%=
+                      locals.index_page_data.business_data_fr.address_city %>, <%=
+                        locals.index_page_data.business_data_fr.address_province_state %>, <%=
+                          locals.index_page_data.business_data_fr.address_country %>
+                </p>
+                <p><strong>Email:</strong> <a href="mailto:<%= locals.index_page_data.business_data_fr.email %>">
+                    <%= locals.index_page_data.business_data_fr.email %>
+                  </a></p>
+
+                <h3>Web Publishing Services</h3>
+                <p>As a web publisher, Opom Canada creates and publishes high-quality content in both French and
+                  English. We are committed to maintaining accurate, reliable, and relevant information on our platform,
+                  but we do not guarantee the completeness or accuracy of all content.</p>
+
+                <h3>Business Directory</h3>
+                <p>Opom Canada is a fully operational business directory for Canadian businesses to list their services
+                  and
+                  connect with customers. The directory is live and businesses across Canada can now create listings to
+                  enhance their online presence. Listings and services in the directory are subject to additional terms
+                  and
+                  conditions, which users must agree to upon registering.</p>
+
+                <h3>Intellectual Property</h3>
+                <p>All content on this website, including text, images, graphics, logos, and other materials, is the
+                  property of Opom Canada or its content providers and is protected by intellectual property laws. You
+                  may not copy, reproduce, or use any of the materials on this website without prior written consent
+                  from Opom Canada.</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>Opom Canada is not responsible for any damages arising from the use of our website or services. We do
+                  not guarantee that the website will be free from errors or interruptions. Users access the site at
+                  their own risk.</p>
+
+                <h3>Governing Law</h3>
+                <p>This legal notice is governed by the laws of Canada. Any disputes arising from the use of our website
+                  will be subject to the exclusive jurisdiction of the courts in Gatineau, QC, Canada.</p>
+              </section>
+
+              <section>
+                <p>&copy; <%= new Date().getFullYear() %> Opom Canada</p>
+              </section>
 
 
-        <div class="row h-100">
 
-          <%- include('body/welcome-section/part2.ejs') %>
 
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Welcome section -->
+    </section>
+    <!-- End portfolio section -->
 
 
 
 
 
 
-
-  <!-- Portfolio section -->
-  <section id="tmPortfolio">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          
-          <div class="tm-extra-service-description">
-            <h2 class="tm-text-orange">Mention Légale</h2>
-        
-            <p>
-                <span>Clause de non-responsabilité du service de recommandation pour <strong>Pavage, l'asphalte et le béton résidentiel et commercial à Gatineau</strong>, <strong>Pavage Gatineau Earnanswers</strong>, et <strong>opom.ca</strong></span><br>
-                Le site web <a href='/' target='_blank'>opom.ca</a> est un service de recommandation qui met en relation les utilisateurs avec des entrepreneurs professionnels en pavage, asphalte et béton au Québec, Canada. Nous nous efforçons de fournir des informations précises et à jour concernant les services et entrepreneurs disponibles. Cependant, nous ne garantissons pas la qualité, la fiabilité ou la performance des services fournis par les entrepreneurs recommandés.
-            </p>
-        
-            <h3><strong>Limitation de Responsabilité</strong></h3>
-        
-            <p>
-                En utilisant ce site web et les services de recommandation offerts, vous acceptez que Pavage Gatineau et ses propriétaires, opérateurs, affiliés et employés ne sont pas responsables des dommages, pertes ou responsabilités qui peuvent découler de l'utilisation des services fournis par les entrepreneurs recommandés. Cela inclut, mais ne se limite pas, à tout dommage direct, indirect, incident, consécutif ou punitif.
-            </p>
-        
-            <h3><strong>Absence de Garantie</strong></h3>
-        
-            <p>
-                Pavage Gatineau ne fait aucune représentation ou garantie d'aucune sorte, expresse ou implicite, concernant l'exactitude, l'exhaustivité ou l'adéquation des informations fournies sur ce site web. Toutes les informations sont fournies "en l'état" sans aucune garantie de quelque nature que ce soit.
-            </p>
-        
-            <h3><strong>Entrepreneurs Indépendants</strong></h3>
-        
-            <p>
-                Les entrepreneurs recommandés par Pavage Gatineau sont des entreprises indépendantes et ne sont pas des employés, agents ou représentants de Pavage Gatineau. Nous ne supervisons pas, ne contrôlons pas et n'avons aucune autorité sur le travail effectué par ces entrepreneurs. Il est de la responsabilité de l'utilisateur de mener ses propres vérifications et de vérifier les références, licences et assurances de tout entrepreneur qu'il choisit d'embaucher.
-            </p>
-        
-            <h3><strong>Juridiction</strong></h3>
-        
-            <p>
-                Cette clause de non-responsabilité est régie par les lois du Québec, Canada. En utilisant ce site web, vous acceptez de vous soumettre à la juridiction exclusive des tribunaux situés au Québec pour la résolution de tout litige découlant de ou lié à votre utilisation de ce site web ou des services de recommandation fournis.
-            </p>
-        
-            <h3><strong>Déclaration Supplémentaire</strong></h3>
-        
-            <p>
-                Aux fins de cette clause de non-responsabilité, toute référence à "Pavage Gatineau" fait également référence à "Pavage Gatineau Earnanswers", et "opom.ca."
-            </p>
-        
-            <p>
-                Si vous avez des questions ou des préoccupations concernant cette clause de non-responsabilité, veuillez <a href='/' target='_blank'>nous contacter</a>.
-            </p>
-        
-            <h2 class="tm-text-orange">Conditions d'Utilisation ("Conditions")</h2>
-        
-            <p>Dernière mise à jour : 13 Aout 2024</p>
-            <p>
-                Veuillez lire attentivement ces Conditions d'Utilisation ("Conditions", "Conditions d'Utilisation") avant d'utiliser le site web https://www.opom.ca/ (le "Service") exploité par Pavage Gatineau ("nous", "notre" ou "nos").
-            </p>
-            <p>
-                Votre accès et utilisation du Service sont conditionnés à votre acceptation et au respect de ces Conditions. Ces Conditions s'appliquent à tous les visiteurs, utilisateurs et autres personnes qui accèdent ou utilisent le Service.
-            </p>
-            <p>
-                En accédant ou en utilisant le Service, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord avec une partie des conditions, vous ne pouvez pas accéder au Service.
-            </p>
-        
-            <h3><strong>Liens Vers D'autres Sites Web</strong></h3>
-        
-            <p>
-                Notre Service peut contenir des liens vers des sites web ou des services tiers qui ne sont pas détenus ou contrôlés par Pavage Gatineau.
-            </p>
-            <p>
-                Pavage Gatineau n'a aucun contrôle sur, et n'assume aucune responsabilité pour, le contenu, les politiques de confidentialité ou les pratiques de tout site web ou service tiers. Vous reconnaissez et acceptez en outre que Pavage Gatineau ne sera pas responsable, directement ou indirectement, de tout dommage ou perte causé ou prétendument causé par ou en relation avec l'utilisation ou la confiance accordée à un tel contenu, biens ou services disponibles sur ou via de tels sites web ou services.
-            </p>
-            <p>
-                Nous vous conseillons vivement de lire les termes et conditions et les politiques de confidentialité de tout site web ou service tiers que vous visitez.
-            </p>
-        
-            <h3><strong>Droit Applicable</strong></h3>
-        
-            <p>
-                Ces Conditions sont régies et interprétées conformément aux lois du Québec, Canada, sans tenir compte de ses dispositions en matière de conflit de lois.
-            </p>
-            <p>
-                Notre incapacité à appliquer un droit ou une disposition de ces Conditions ne sera pas considérée comme une renonciation à ces droits. Si une disposition de ces Conditions est jugée invalide ou inapplicable par un tribunal, les autres dispositions de ces Conditions resteront en vigueur. Ces Conditions constituent l'intégralité de l'accord entre nous concernant notre Service, et remplacent et annulent tout accord précédent que nous aurions pu avoir entre nous concernant le Service.
-            </p>
-        
-            <h3><strong>Modifications</strong></h3>
-        
-            <p>
-                Nous nous réservons le droit, à notre seule discrétion, de modifier ou de remplacer ces Conditions à tout moment. Si une révision est importante, nous essaierons de fournir un préavis d'au moins 30 jours avant que les nouvelles conditions n'entrent en vigueur. Ce qui constitue une modification importante sera déterminé à notre seule discrétion.
-            </p>
-            <p>
-                En continuant d'accéder ou d'utiliser notre Service après l'entrée en vigueur de ces révisions, vous acceptez d'être lié par les conditions révisées. Si vous n'êtes pas d'accord avec les nouvelles conditions, veuillez cesser d'utiliser le Service.
-            </p>
-        
-            <h3><strong>Contactez-nous</strong></h3>
-        
-            <p class="mb-0">
-                Si vous avez des questions concernant ces Conditions, veuillez <a href='/' target='_blank'>nous contacter</a>.
-            </p>
-        </div>
-        
-          
-          
-
-
-
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End portfolio section -->
-
-
-
-
-
-
-  <%- include('footer/footer.ejs') %>
+    <%- include('footer/footer.ejs') %>
 
 
 

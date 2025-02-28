@@ -81,7 +81,7 @@ async function mid1(req, res, next) {
 
   // console.log(nav_fr, welcome_section_fr, business_data_fr, all_data_per_page_fr)
   // console.log(contact_fr)
-  console.log(welcome_section_fr)
+  // console.log(welcome_section_fr)
 
 
 
@@ -93,6 +93,9 @@ async function mid1(req, res, next) {
     welcome_section_fr: welcome_section_fr,
     footer_fr: footer_fr
   }
+
+
+  console.log("\n\nres.locals.index_page_data ->", res.locals.index_page_data)
 
 
 
