@@ -728,35 +728,39 @@ app.get('/sitemap/sitemap-1', async (req, res, next) => {
   let last_modified_1 = '2024-08-14T00:34:21.928Z';
   let last_modified_1_date = new Date(last_modified_1);
 
+  let last_modified_2 = '2025-03-02T14:48:01.424Z';
+  let last_modified_2_date = new Date(last_modified_2);
+  
+
 
   const urls = [
     {
       URL: '/',
-      lastmod: last_modified_1_date,
+      lastmod: last_modified_2_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/contact',
-      lastmod: last_modified_1_date,
+      lastmod: last_modified_2_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/organisation',
-      lastmod: last_modified_1_date,
+      lastmod: last_modified_2_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/a-propos',
-      lastmod: last_modified_1_date,
+      lastmod: last_modified_2_date,
       changefreq: "monthly",
       priority: 1
     },
     {
       URL: '/plan-du-site',
-      lastmod: last_modified_1_date,
+      lastmod: last_modified_2_date,
       changefreq: "monthly",
       priority: 1
     }
