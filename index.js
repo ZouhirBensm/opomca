@@ -113,8 +113,16 @@ const goneUrls = [
   "/blog/audio-conversion/blog-posting/is-aiff-mp3",
   "/blog/audio-conversion/blog-posting/is-aiff-the-same-as-mp3",
   "/blog/audio-conversion/blog-posting/can-audacity-convert-aiff-to-mp3",
+  "/blog/generator-sizing-and-power-calculations/blog-posting/generator-wattage-calculator-spreadsheet",
+  "/blog/generator-sizing-and-power-calculations/blog-posting/how-many-kw-is-a-10000-watt-generator",
+  "/blog/generator-sizing-and-power-calculations/blog-posting/how-many-kw-generator-to-run-a-home",
+  "/blog/generator-sizing-and-power-calculations/blog-posting/how-many-kw-is-my-generator",
+  "/blog/artificial-intelligence/blog-posting/okcupid-dataset-analysis-for-machine-learning",
+  "/blog/artificial-intelligence/blog-posting/exploring-okcupid-dataset-with-machine-learning-predicting-mating-success-for-straight-males",
+  "/blog/artificial-intelligence/blog-posting/exploring-okcupid-dataset-with-stratified-sampling",
+  "/blog/artificial-intelligence/blog-posting/okcupid-dataset-preparing-the-data-before-learning-algorithms",
+  "/blog/artificial-intelligence/blog-posting/comparing-model-performance-linear-regression-decision-tree-and-random-forest-for-predicting-mating-success",
 ];
-
 
 
 
@@ -316,10 +324,10 @@ app.get('/blog', middleware4.mid1, async (req, res, next) => {
     const error = new Error("No blog_page_fr found!")
     return next(error)
   }
-  
-  
 
-  console.log({categories, blog_page_fr})
+
+
+  console.log({ categories, blog_page_fr })
 
 
   res.locals.index_page_data = {
@@ -425,7 +433,7 @@ app.get('/blog/:category', async (req, res, next) => {
   }
 
 
-  
+
   const category_page_fr = await db.category_page_fr.findOne({
     raw: true,
   });
@@ -466,9 +474,9 @@ app.get('/blog/:category', async (req, res, next) => {
   console.log(res.locals.index_page_data)
 
   return res.render('categorie', { ...res.locals.index_page_data });
-  
 
-  
+
+
 
 
 });
@@ -503,12 +511,12 @@ app.get('/blog/:category/blog-posting/:title', middleware4.mid1, async (req, res
   });
 
 
-  
+
   console.log('\n\n(1)-> ', blog_element_fr.has_equ, '\n\n');
 
   // Read the first byte of the existing Buffer directly
   blog_element_fr.has_equ = Boolean(blog_element_fr.has_equ.readUInt8(0));
-  
+
   console.log('\n\n(2)-> ', blog_element_fr.has_equ, '\n\n');
 
   if (!blog_element_fr) {
@@ -737,7 +745,7 @@ app.get('/sitemap/sitemap-1', async (req, res, next) => {
 
   let last_modified_2 = '2025-03-02T14:48:01.424Z';
   let last_modified_2_date = new Date(last_modified_2);
-  
+
 
 
   const urls = [
