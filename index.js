@@ -15,6 +15,7 @@ const Compression = require('./miscellaneous/services/compression/compression-mi
 
 
 const affiliateLinks_app_router = require('./affiliatelinks-backend')
+const router_pm2 = require('./router-pm2-backend');
 
 
 
@@ -35,7 +36,7 @@ const { ENVIRONMENT, SIGNAL } = require('./miscellaneous/const/env')
 const app = express()
 
 app.use(Compression);
-
+app.use(express.json()); 
 
 
 const middleware1 = require('./lifecycle/middleware/mid1')
@@ -138,6 +139,9 @@ goneUrls.forEach(url => {
 
 
 app.use('/ral', affiliateLinks_app_router)
+
+app.use('/pm2', router_pm2)
+    
 
 
 
