@@ -15,7 +15,6 @@ const Compression = require('./miscellaneous/services/compression/compression-mi
 
 
 const affiliateLinks_app_router = require('./affiliatelinks-backend')
-const router_pm2 = require('./router-pm2-backend');
 
 
 
@@ -139,8 +138,6 @@ goneUrls.forEach(url => {
 
 
 app.use('/ral', affiliateLinks_app_router)
-
-app.use('/pm2', router_pm2)
     
 
 
