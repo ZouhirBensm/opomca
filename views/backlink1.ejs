@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <%- include('head/setup-pre-variables.ejs') %>
+  
+  <!-- < %- include('head/load-backend-variables/variables.ejs') %> -->
+  
+  <%- include('head/head-common-part1.ejs') %>
+  
+  <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
+  
+  <%- include('head/css-loader/css.ejs') %>
+
+  <!-- <meta name="googlebot" content="noindex">
+  <meta name="robots" content="noindex"> -->
+
+</head>
+
+
+
+<body>
+
+
+  <%- include('body/nav.ejs') %>
+
+
+  <!-- Welcome Section -->
+  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="<%= welcome_section_fr.banner_img_path %>"
+    alt="<%= welcome_section_fr.banner_img_alt %>">
+
+    <%- include('body/welcome-section/part1.ejs') %>
+
+    <div class="tm-bg-black-transparent tm-welcome-container">
+      <div class="container-fluid">
+
+
+        <div class="row h-100">
+
+          <%- include('body/welcome-section/part2.ejs') %>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Welcome section -->
+
+
+
+
+
+  <!-- Portfolio section -->
+  <section id="tmPortfolio">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+
+
+
+          <div class="tm-extra-service-description">
+
+
+            <% 
+            // console.log(locals.canonical)
+            // console.log(locals.meta_description)
+            // console.log(locals.html_title)
+            // console.log(locals.urls.slice(0, 5)); 
+            // console.log(locals.index_page_data);
+            %>
+
+            <style>
+              section > ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                padding: 0;
+                gap: 10px;
+              }
+              section > ul > li {
+                width: 35ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.9em;
+              }
+            </style>
+
+            <section>
+              <ul>
+                <% urls.forEach(url => { %>
+                  <li><a href="<%= url %>"><%= url %></a></li>
+                <% }); %>
+              </ul>
+            </section>
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End portfolio section -->
+
+
+
+
+
+  <%- include('footer/footer.ejs') %>
+
+
+
+
+</body>
+
+
+
+
+
+</html>

@@ -53,6 +53,7 @@ async function mid1(req, res, next) {
 
 
 
+
   const footer_fr = await db.footer_fr.findOne({
     raw: true
   });

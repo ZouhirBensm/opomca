@@ -1,6 +1,5 @@
 node_modules
 .env
-notes
 models
 /public/sitemap/sitemap.xml
 /ignore

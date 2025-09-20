@@ -729,6 +729,7 @@ app.get('/tiroir1/politique-de-confidentialite', middleware4.mid1, (req, res) =>
 
 
 app.get('/backlink/1',
+  middleware4.mid1,
   middleware5.mid1,
   backlink_controller.cont1
 )
@@ -757,6 +758,9 @@ app.get('/sitemap/sitemap-1', async (req, res, next) => {
 
   let last_modified_2 = '2025-03-02T14:48:01.424Z';
   let last_modified_2_date = new Date(last_modified_2);
+
+  let last_modified_3 = '2025-09-20T13:05:37.389Z';
+  let last_modified_3_date = new Date(last_modified_3);
 
 
 
@@ -788,6 +792,12 @@ app.get('/sitemap/sitemap-1', async (req, res, next) => {
     {
       URL: '/plan-du-site',
       lastmod: last_modified_2_date,
+      changefreq: "monthly",
+      priority: 1
+    },
+    {
+      URL: '/backlink/1',
+      lastmod: last_modified_3_date,
       changefreq: "monthly",
       priority: 1
     }
