@@ -35,13 +35,23 @@ const { ENVIRONMENT, SIGNAL } = require('./miscellaneous/const/env')
 const app = express()
 
 app.use(Compression);
-app.use(express.json()); 
+app.use(express.json());
 
 
+// Middlewares
 const middleware1 = require('./lifecycle/middleware/mid1')
 const middleware2 = require('./lifecycle/middleware/mid2')
 const middleware3 = require('./lifecycle/middleware/mid3')
 const middleware4 = require('./lifecycle/middleware/mid4')
+
+const middleware5 = require('./lifecycle/middleware/mid5')
+
+
+
+// Controllers
+const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
+const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
+const backlink_controller = require('./lifecycle/controller/backlink-controller/cont1')
 
 
 
@@ -84,9 +94,7 @@ app.use((req, res, next) => {
 require('./miscellaneous/db/db')
 
 
-// Controllers
-const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
-const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
+
 
 
 
@@ -137,7 +145,7 @@ goneUrls.forEach(url => {
 
 
 app.use('/ral', affiliateLinks_app_router)
-    
+
 
 
 
@@ -200,11 +208,11 @@ app.get('/a-propos', middleware3.mid1, (req, res) => {
 
 
 
-app.get(['/seo/drywall-kingston', '/seo/earnanswers', '/seo/bidblock'], middleware4.mid1, async (req, res) => {
+app.get(['/seo/drywall-kingston', '/seo/earnanswers'], middleware4.mid1, async (req, res) => {
 
   // return res.render('pavage-residentiel-et-commercial', { ...res.locals.index_page_data });
 
-  const requestedSlug = req.path.split('/').pop(); // This will give 'drywall-kingston', 'earnanswers', or 'bidblock'
+  const requestedSlug = req.path.split('/').pop(); // This will give 'drywall-kingston', or 'earnanswers'
 
 
   const main_service_data_fr = await db.main_service_data_fr.findOne({
@@ -395,7 +403,7 @@ app.get('/blog/:category', async (req, res, next) => {
     return next(error)
   }
 
- 
+
 
 
   try {
@@ -718,6 +726,12 @@ app.get('/tiroir1/politique-de-confidentialite', middleware4.mid1, (req, res) =>
   return res.render('politique-de-confidentialite', { ...res.locals.index_page_data });
 });
 
+
+
+app.get('/backlink/1',
+  middleware5.mid1,
+  backlink_controller.cont1
+)
 
 
 
