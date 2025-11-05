@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <%- include('head/setup-pre-variables.ejs') %>
+
+    <!-- < %- include('head/load-backend-variables/variables.ejs') %> -->
+
+    <%- include('head/head-common-part1.ejs') %>
+
+      <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
+
+        <%- include('head/css-loader/css.ejs') %>
+
+          <meta name="googlebot" content="noindex">
+          <meta name="robots" content="noindex">
+
+          <style>
+            dialog {
+              width: 300px;
+              padding: 20px;
+              border: none;
+              border-radius: 8px;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            dialog::backdrop {
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .star-rating {
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: center;
+              padding: 10px 0;
+            }
+
+            .star-rating input {
+              display: none;
+            }
+
+            .star-rating label {
+              font-size: 2rem;
+              color: #ccc;
+              cursor: pointer;
+              transition: color 0.2s ease-in-out;
+            }
+
+            .star-rating input:checked~label,
+            .star-rating input:checked~label~label {
+              color: #ffca08;
+            }
+
+            .star-rating label:hover,
+            .star-rating label:hover~label {
+              color: #ffca08;
+            }
+
+
+
+            .review-input {
+              width: 100%;
+              padding: 10px;
+              margin: 10px 0;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              resize: vertical;
+            }
+
+            .button-container {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            button {
+              padding: 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 1rem;
+            }
+
+            #postReviewBtn {
+              background-color: #28a745;
+              color: white;
+            }
+
+            #closeModalBtn {
+              background-color: #dc3545;
+              color: white;
+            }
+          </style>
+
+</head>
+
+
+
+
+<body>
+
+
+  <%- include('body/nav.ejs') %>
+
+
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll"
+      data-image-src="<%= welcome_section_fr.banner_img_path %>" alt="<%= welcome_section_fr.banner_img_alt %>">
+
+      <%- include('body/welcome-section/part1.ejs') %>
+
+        <div class="tm-bg-black-transparent tm-welcome-container">
+          <div class="container-fluid">
+
+
+            <div class="row h-100">
+
+              <%- include('body/welcome-section/part2.ejs') %>
+
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- End Welcome section -->
+
+
+
+
+
+
+
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+
+            <div class="tm-extra-service-description">
+
+
+              <h2>HVAC Gatineau</h2>
+
+              <p>
+                Serving the Gatineau community, HVAC Gatineau is your trusted partner for comprehensive heating,
+                ventilation, and air conditioning solutions, specializing in the repair, maintenance, and installation
+                of furnaces, air conditioners, heat pumps, and air exchangers.<br /><br />Whether you need a quick fix,
+                a seasonal tune-up, or a complete system replacement, their skilled technicians ensure your home's
+                heating and cooling systems operate efficiently and reliably all year round.
+              </p>
+
+              <br /><br />
+
+
+              <h2 class="tm-text-orange">Review</h2>
+
+              <div id="swapped">
+                <!-- Trigger/Open The Modal -->
+                <button id="openModalBtn">Write a review</button>
+
+                <!-- The Modal -->
+                <!-- <dialog id="myModal">
+                <p>This is a modal dialog!</p>
+                <button id="closeModalBtn">Close</button>
+              </dialog> -->
+
+
+                <!-- The Modal -->
+                <dialog id="myModal">
+                  <p>Please rate:</p>
+                  <div class="star-rating">
+                    <!-- <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label> -->
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                  </div>
+                  <input class="review-input" placeholder="Write your username here..." />
+                  <textarea class="review-input" placeholder="Write your review here..."></textarea>
+                  <div class="button-container">
+                    <button id="postReviewBtn">Post</button>
+                    <button id="closeModalBtn">Close</button>
+                  </div>
+                </dialog>
+
+              </div>
+
+            </div>
+
+
+
+            <script>
+              const postReviewBtn = document.getElementById('postReviewBtn');
+              const swappedDiv = document.getElementById('swapped');
+
+
+
+
+              const openModalBtn = document.getElementById('openModalBtn');
+              const closeModalBtn = document.getElementById('closeModalBtn');
+              const myModal = document.getElementById('myModal');
+
+              openModalBtn.addEventListener('click', () => {
+                myModal.showModal();
+              });
+
+              closeModalBtn.addEventListener('click', () => {
+                myModal.close();
+              });
+
+
+              postReviewBtn.addEventListener('click', () => {
+                myModal.close(); // Close the modal
+                swappedDiv.innerHTML = '<p style="color: green;">Thanks for your review!</p>';
+
+              });
+
+
+            </script>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End portfolio section -->
+
+
+
+
+
+
+    <%- include('footer/footer.ejs') %>
+
+
+
+</body>
+
+
+
+
+
+</html>
