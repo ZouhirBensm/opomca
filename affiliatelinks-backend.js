@@ -316,14 +316,14 @@ affiliateLinks_app_router.get('/thirty-one', (req,res)=>{
 
 // https://opom.ca/ral/thirty-two
 // http://localhost:3005/ral/thirty-two
-affiliateLinks_app_router.get('/thirty-two', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-pavagegatineau', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-two', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-pavagegatineau', { ...res.locals.index_page_data });
+// })
 
 // https://opom.ca/ral/thirty-two
-// affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
-// })
+affiliateLinks_app_router.get('/thirty-two', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/NwijduDLYpAQkr1n6');
+})
 
 
 
@@ -358,29 +358,29 @@ affiliateLinks_app_router.get('/thirty-four', middleware4.mid1, (req,res)=>{
 
 
 // https://opom.ca/ral/thirty-five
-affiliateLinks_app_router.get('/thirty-five', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-pavagelaval', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-five', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-pavagelaval', { ...res.locals.index_page_data });
+// })
 
 
 // https://opom.ca/ral/thirty-five
-// affiliateLinks_app_router.get('/thirty-five', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/9aSpXFqxeyWH7fgs9');
-// })
-
-
-
-
-// https://opom.ca/ral/thirty-six
-affiliateLinks_app_router.get('/thirty-six', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-hvacgatineau', { ...res.locals.index_page_data });
+affiliateLinks_app_router.get('/thirty-five', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/9aSpXFqxeyWH7fgs9');
 })
 
 
+
+
 // https://opom.ca/ral/thirty-six
-// affiliateLinks_app_router.get('/thirty-six', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/NoAosQwsQRJNaUEQ7');
+// affiliateLinks_app_router.get('/thirty-six', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-hvacgatineau', { ...res.locals.index_page_data });
 // })
+
+
+// https://opom.ca/ral/thirty-six
+affiliateLinks_app_router.get('/thirty-six', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/NoAosQwsQRJNaUEQ7');
+})
 
 
 
