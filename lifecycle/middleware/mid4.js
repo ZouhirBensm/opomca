@@ -38,10 +38,10 @@ async function mid1(req, res, next) {
 
   // console.log('\n(0)->', res.locals.req_path)
 
-
   const all_data_per_page_fr = await db.all_data_per_page_fr.findOne({
     where: {
-      page_url_identify: res.locals.req_path,
+      page_url_identify: '/a-propos',
+      // res.locals.req_path || 
     },
     raw: true
   });
@@ -81,7 +81,7 @@ async function mid1(req, res, next) {
     footer_fr: footer_fr
   }
 
-
+  console.log('\n\n123\n\n', res.locals.index_page_data)
 
 
   return next()

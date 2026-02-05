@@ -728,11 +728,11 @@ app.get('/tiroir1/politique-de-confidentialite', middleware4.mid1, (req, res) =>
 
 
 
-app.get('/backlink/1',
+app.get('/backlink/:n',
   middleware4.mid1,
   middleware5.mid1,
   backlink_controller.cont1
-)
+);
 
 
 
@@ -976,6 +976,9 @@ app.use(get_catch_controller.cont1)
 
 // Error thrown on server, return 200 and respond with json object describing server error
 app.use(data_error_handler_controller.error_cont1)
+
+
+
 
 
 
