@@ -1,3 +1,7 @@
+  <%
+  console.log(req_path)
+  %>
+
 <% if (req_path === '/') { %>
 
 
@@ -99,8 +103,7 @@
   <link rel="canonical" href='/blog/<%= category_fr.slug %>'>
     
 
-
-<% } else if (req_path === '/sitemap') { %>
+<% } else if (req_path === '/sitemap/') { %>
 
   <%
   console.log(plan_du_site_page_fr)
