@@ -660,6 +660,20 @@ app.get('/plan-du-site', middleware4.mid1, async (req, res, next) => {
 
 
 
+  let backlink_pages_urls = []
+  const backlinksDir = path.join(__dirname, './backlinks');
+
+  const files = fs.readdirSync(backlinksDir);
+
+  for (const file of files) {
+    const match = file.match(/^backlink(\d+)\.txt$/i);
+    if (!match) continue;
+
+    const number = match[1];
+
+    backlink_pages_urls.push(`/backlink/${number}`);
+  }
+
 
 
   res.locals.index_page_data.all_data_per_page_fr = {
@@ -673,7 +687,9 @@ app.get('/plan-du-site', middleware4.mid1, async (req, res, next) => {
     extra_service_pages_fr: extra_service_pages_fr,
     categories_and_associated_blogs: categories_and_associated_blogs,
     plan_du_site_page_fr: plan_du_site_page_fr,
-    main_service_data_fr: main_service_data_fr
+    main_service_data_fr: main_service_data_fr,
+    backlink_pages_urls: backlink_pages_urls
+
   }
 
 

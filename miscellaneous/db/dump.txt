@@ -411,8 +411,9 @@ CREATE TABLE `plan_du_site_page_fr` (
   `meta_description` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `h2_1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `h3_1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `h3_2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h2_2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `opt1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h2_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -423,7 +424,7 @@ CREATE TABLE `plan_du_site_page_fr` (
 
 LOCK TABLES `plan_du_site_page_fr` WRITE;
 /*!40000 ALTER TABLE `plan_du_site_page_fr` DISABLE KEYS */;
-INSERT INTO `plan_du_site_page_fr` VALUES (1,'Plan du Site','Opom Canada','##6','Plan du site','Plan du site HTML','Plan du site XML','Update sitemap');
+INSERT INTO `plan_du_site_page_fr` VALUES (1,'Plan du Site','Opom Canada','##6','Plan du site','Plan du site HTML','Plan du site XML','Update sitemap','Backlinks');
 /*!40000 ALTER TABLE `plan_du_site_page_fr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -515,4 +516,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-08 16:19:28
+-- Dump completed on 2026-02-08 16:37:10

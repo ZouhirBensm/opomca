@@ -3,14 +3,14 @@
 
 <head>
   <%- include('head/setup-pre-variables.ejs') %>
-  
-  <%- include('head/load-backend-variables/variables.ejs') %>
-  
-  <%- include('head/head-common-part1.ejs') %>
-  
-  <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
-  
-  <%- include('head/css-loader/css.ejs') %>
+
+    <%- include('head/load-backend-variables/variables.ejs') %>
+
+      <%- include('head/head-common-part1.ejs') %>
+
+        <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
+
+          <%- include('head/css-loader/css.ejs') %>
 </head>
 
 
@@ -22,101 +22,129 @@
 
 
 
-  <!-- Welcome Section -->
-  <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="<%= welcome_section_fr.banner_img_path %>"
-    alt="<%= welcome_section_fr.banner_img_alt %>">
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll"
+      data-image-src="<%= welcome_section_fr.banner_img_path %>" alt="<%= welcome_section_fr.banner_img_alt %>">
 
-    <%- include('body/welcome-section/part1.ejs') %>
+      <%- include('body/welcome-section/part1.ejs') %>
 
-    <div class="tm-bg-black-transparent tm-welcome-container">
-      <div class="container-fluid">
+        <div class="tm-bg-black-transparent tm-welcome-container">
+          <div class="container-fluid">
 
 
-        <div class="row h-100">
+            <div class="row h-100">
 
-          <%- include('body/welcome-section/part2.ejs') %>
+              <%- include('body/welcome-section/part2.ejs') %>
 
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Welcome section -->
+    </section>
+    <!-- End Welcome section -->
 
 
 
 
 
 
-  <!-- Portfolio section -->
-  <section id="tmPortfolio">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div>
-            <h2><%= plan_du_site_page_fr.h2_1 %></h2>
-            <h3><%= plan_du_site_page_fr.h3_1 %></h3>
-            
-            <ul>
-              <li><a href="/">Opom Canada</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/organisation">Organization</a></li>
-              <li><a href="/a-propos">About Us</a></li>
-              
-              
-              <li><a href="/tiroir1/mention-legale">Legal Notice</a></li>
-              <li><a href="/tiroir1/politique-de-confidentialite">Privacy Policy</a></li>
-              <li><a href="/backlink/1">List of links for Google crawler 1</a></li>
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <h2>
+                <%= plan_du_site_page_fr.h2_1 %>
+              </h2>
+              <h2>
+                <%= plan_du_site_page_fr.h3_1 %>
+              </h2>
+
+              <ul>
+                <li><a href="/">Opom Canada</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/organisation">Organization</a></li>
+                <li><a href="/a-propos">About Us</a></li>
+
+
+                <li><a href="/tiroir1/mention-legale">Legal Notice</a></li>
+                <li><a href="/tiroir1/politique-de-confidentialite">Privacy Policy</a></li>
+                <li><a href="/backlink/1">List of links for Google crawler 1</a></li>
 
 
 
-              <li>SEO
-                <ul>
+                <li>SEO
+                  <ul>
 
-                  <% main_service_data_fr.forEach(function(service) { %>
-                    <li><a href="/seo/<%= service.slug %>"><%= service.service_name %></a></li>
+                    <% main_service_data_fr.forEach(function(service) { %>
+                      <li><a href="/seo/<%= service.slug %>">
+                          <%= service.service_name %>
+                        </a></li>
+                      <% }); %>
+
+
+                        <% extra_service_pages_fr.forEach(function(page) { %>
+                          <li><a href="/seo/<%= page.slug %>">
+                              <%= page.title %>
+                            </a></li>
+                          <% }); %>
+                  </ul>
+                </li>
+
+                <li><a href="/blog">Blog</a>
+
+                  <ul>
+                    <% Object.keys(categories_and_associated_blogs).forEach(function(categoryName) { %>
+                      <li>
+                        <%= categoryName %>
+                          <ul>
+                            <% categories_and_associated_blogs[categoryName].blogs.forEach(function(blog) { %>
+                              <li><a
+                                  href="/blog/<%= categories_and_associated_blogs[categoryName].categorySlug %>/blog-posting/<%= blog.slug %>">
+                                  <%= blog.title %>
+                                </a></li>
+                              <% }); %>
+                          </ul>
+                      </li>
+                      <% }); %>
+                  </ul>
+
+
+
+                </li>
+                <li><a href="/plan-du-site">
+                    <%= plan_du_site_page_fr.page_title %>
+                  </a></li>
+              </ul>
+              <h2><%= plan_du_site_page_fr.h3_2 %></h2>
+
+              <ul>
+                <li><a href="/sitemap/sitemap-1" target="_blank">
+                    <%= plan_du_site_page_fr.opt1 %>
+                  </a></li>
+                <li><a href="/sitemap/sitemap.xml" target="_blank">
+                    <%= plan_du_site_page_fr.h3_2 %>
+                  </a></li>
+              </ul>
+
+              <h2>Backlinks</h2>
+
+              <ul>
+                <% backlink_pages_urls.forEach(function(backlink_page_url) { %>
+                  <li><a href="<%= backlink_page_url %>">
+                      <%= backlink_page_url %>
+                    </a></li>
                   <% }); %>
+              </ul>
 
-
-                  <% extra_service_pages_fr.forEach(function(page) { %>
-                    <li><a href="/seo/<%= page.slug %>"><%= page.title %></a></li>
-                  <% }); %>
-                </ul>
-              </li>
-
-              <li><a href="/blog">Blog</a>
-
-                <ul>
-                  <% Object.keys(categories_and_associated_blogs).forEach(function(categoryName) { %>
-                    <li><%= categoryName %>
-                      <ul>
-                        <% categories_and_associated_blogs[categoryName].blogs.forEach(function(blog) { %>
-                          <li><a href="/blog/<%= categories_and_associated_blogs[categoryName].categorySlug %>/blog-posting/<%= blog.slug %>"><%= blog.title %></a></li>
-                        <% }); %>
-                      </ul>
-                    </li>
-                  <% }); %>
-                </ul>
-
-
-
-              </li>
-              <li><a href="/plan-du-site"><%= plan_du_site_page_fr.page_title %></a></li>
-            </ul>
-            <h3><%= plan_du_site_page_fr.h3_2 %></h3>
-
-            <ul>
-              <li><a href="/sitemap/sitemap-1" target="_blank"><%= plan_du_site_page_fr.opt1 %></a></li>
-              <li><a href="/sitemap/sitemap.xml" target="_blank"><%= plan_du_site_page_fr.h3_2 %></a></li>
-            </ul>
-            
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <%- include('footer/footer.ejs') %>
+    <%- include('footer/footer.ejs') %>
 
 
 
