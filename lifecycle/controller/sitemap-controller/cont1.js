@@ -65,7 +65,7 @@ async function cont1(req, res, next) {
       priority: 1
     },
     {
-      URL: '/plan-du-site',
+      URL: '/sitemap',
       lastmod: last_modified_2_date,
       changefreq: "monthly",
       priority: 1
@@ -229,13 +229,13 @@ async function cont1(req, res, next) {
 
   // return res.render('sitemap');
   // return res.sendFile('sitemap.html', { root: 'public' });
-  // return res.redirect(301, '/plan-du-site');
+  // return res.redirect(301, '/sitemap');
 
 
 
 
   // return res.end()
-  return res.redirect(301, '/plan-du-site');
+  return res.redirect(301, '/sitemap');
 }
 
 

@@ -4,13 +4,13 @@
 <head>
   <%- include('head/setup-pre-variables.ejs') %>
 
-    <%- include('head/load-backend-variables/variables.ejs') %>
+  <%- include('head/load-backend-variables/variables.ejs') %>
 
-      <%- include('head/head-common-part1.ejs') %>
+  <%- include('head/head-common-part1.ejs') %>
 
-        <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
+  <%- include('head/meta-title-canonical-loader/meta-title-can.ejs') %>
 
-          <%- include('head/css-loader/css.ejs') %>
+  <%- include('head/css-loader/css.ejs') %>
 </head>
 
 
@@ -112,22 +112,22 @@
 
 
                 </li>
-                <li><a href="/plan-du-site">
+                <li><a href="/sitemap">
                     <%= plan_du_site_page_fr.page_title %>
                   </a></li>
               </ul>
-              <h2><%= plan_du_site_page_fr.h3_2 %></h2>
+              <h2><%= plan_du_site_page_fr.h2_1 %></h2>
 
               <ul>
                 <li><a href="/sitemap/sitemap-1" target="_blank">
                     <%= plan_du_site_page_fr.opt1 %>
                   </a></li>
                 <li><a href="/sitemap/sitemap.xml" target="_blank">
-                    <%= plan_du_site_page_fr.h3_2 %>
+                    <%= plan_du_site_page_fr.h2_2 %>
                   </a></li>
               </ul>
 
-              <h2>Backlinks</h2>
+              <h2><%= plan_du_site_page_fr.h2_3 %></h2>
 
               <ul>
                 <% backlink_pages_urls.forEach(function(backlink_page_url) { %>

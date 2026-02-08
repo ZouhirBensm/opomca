@@ -304,7 +304,7 @@ CREATE TABLE `footer_fr` (
 
 LOCK TABLES `footer_fr` WRITE;
 /*!40000 ALTER TABLE `footer_fr` DISABLE KEYS */;
-INSERT INTO `footer_fr` VALUES (1,'Image SVG you logo Youtube','Image SVG you logo Twitter','Image SVG you logo Pinterest','Image SVG you logo Quora','Image SVG of a letter','Sitemap','Blog','Legal notice','Privacy Policy','/plan-du-site','/blog','/tiroir1/mention-legale','/tiroir1/politique-de-confidentialite','Powered by:');
+INSERT INTO `footer_fr` VALUES (1,'Image SVG you logo Youtube','Image SVG you logo Twitter','Image SVG you logo Pinterest','Image SVG you logo Quora','Image SVG of a letter','Sitemap','Blog','Legal notice','Privacy Policy','/sitemap','/blog','/tiroir1/mention-legale','/tiroir1/politique-de-confidentialite','Powered by:');
 /*!40000 ALTER TABLE `footer_fr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,7 +424,7 @@ CREATE TABLE `plan_du_site_page_fr` (
 
 LOCK TABLES `plan_du_site_page_fr` WRITE;
 /*!40000 ALTER TABLE `plan_du_site_page_fr` DISABLE KEYS */;
-INSERT INTO `plan_du_site_page_fr` VALUES (1,'Plan du Site','Opom Canada','##6','Plan du site','Plan du site HTML','Plan du site XML','Update sitemap','Backlinks');
+INSERT INTO `plan_du_site_page_fr` VALUES (1,'Sitemap','Opom Canada','Explore the full site map of opom.ca: discover all our Canadian blog articles, business resources, services, and more in one easy place. Fast navigation for readers and companies!','Sitemap','HTML Sitemap','XML Sitemap','Update Sitemap','Backlinks');
 /*!40000 ALTER TABLE `plan_du_site_page_fr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -516,4 +516,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-08 16:37:10
+-- Dump completed on 2026-02-08 17:06:58

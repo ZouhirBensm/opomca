@@ -569,7 +569,7 @@ app.get('/blog/:category/blog-posting/:title', middleware4.mid1, async (req, res
 
 
 
-app.get('/plan-du-site', middleware4.mid1, async (req, res, next) => {
+app.get('/sitemap', middleware4.mid1, async (req, res, next) => {
 
 
 
@@ -695,7 +695,7 @@ app.get('/plan-du-site', middleware4.mid1, async (req, res, next) => {
 
 
 
-  // console.log("\n\nres.locals.index_page_data -> \n\n", res.locals.index_page_data)
+  console.log("\n\nres.locals.index_page_data -> \n\n", res.locals.index_page_data, plan_du_site_page_fr)
 
 
 

@@ -22,7 +22,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
     { name: "Request Free Quote", item: "https://opom.ca/contact" },
     { name: "Organisation", item: "https://opom.ca/organisation" },
     { name: "À propos", item: "https://opom.ca/a-propos" },
-    { name: "Plan du site", item: "https://opom.ca/plan-du-site" },
+    { name: "Sitemap", item: "https://opom.ca/sitemap" },
     { name: "Avertissement légal", item: "https://opom.ca/tiroir1/avertissement-legal" },
     { name: "Politique de confidentialité", item: "https://opom.ca/tiroir1/politique-de-confidentialite" },
     // { name: "Service name 1", item: "https://opom.ca/seo/service1" },
