@@ -11,7 +11,22 @@ async function mid1(req, res, next) {
       return next(new Error("Invalid backlink number"));
     }
 
-    const filePath = path.join(__dirname, `../../backlinks/backlink${n}.txt`);
+    console.log("\n\nprocess.env['PATH_TO_BACKLINKS']\n\n", process.env['PATH_TO_BACKLINKS'], "\n\n")
+
+    const basePath = process.env['PATH_TO_BACKLINKS'];
+    // const basePath = false
+
+    if (!basePath) {
+      const errormessage = "Backlinks path configuration missing. PATH_TO_BACKLINKS environment variable is not set"
+      let error = new Error(errormessage)
+
+      res.locals.error = error
+      return next();
+    }
+
+    // Construct the full file path
+    const filePath = path.join(basePath, `backlink${n}.txt`);
+
     const fileContent = await fs.readFile(filePath, 'utf-8');
 
     const urls = fileContent
@@ -26,7 +41,7 @@ async function mid1(req, res, next) {
       res.locals.urls = [];
       error.message = `backlink${n}.txt is not present in the respective folder`
       res.locals.error = error
-      
+
       // console.error('Error reading backlink file:', error);
       // return res.status(500).render('url_not_present')
       // return next();
