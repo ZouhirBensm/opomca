@@ -372,15 +372,15 @@ affiliateLinks_app_router.get('/thirty-five', middleware4.mid1, (req,res)=>{
 
 
 // https://opom.ca/ral/thirty-six
-affiliateLinks_app_router.get('/thirty-six', middleware4.mid1, (req,res)=>{
-  return res.render('temporal-micro-workers-hvacgatineau', { ...res.locals.index_page_data });
-})
+// affiliateLinks_app_router.get('/thirty-six', middleware4.mid1, (req,res)=>{
+//   return res.render('temporal-micro-workers-hvacgatineau', { ...res.locals.index_page_data });
+// })
 
 
 // https://opom.ca/ral/thirty-six
-// affiliateLinks_app_router.get('/thirty-six', (req,res)=>{
-//   return res.redirect('https://maps.app.goo.gl/NoAosQwsQRJNaUEQ7');
-// })
+affiliateLinks_app_router.get('/thirty-six', (req,res)=>{
+  return res.redirect('https://maps.app.goo.gl/NoAosQwsQRJNaUEQ7');
+})
 
 
 
