@@ -59,7 +59,7 @@ CREATE TABLE `blog_element_fr` (
   `category_id` int DEFAULT NULL,
   `meta_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lang` varchar(3) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lang` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `has_equ` bit(1) NOT NULL DEFAULT b'0',
   PRIMARY KEY (`id`),
   KEY `blog_element_category_FK` (`category_id`),
@@ -355,7 +355,7 @@ CREATE TABLE `main_service_data_fr` (
   `service_image_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_image_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `web_page_content` text COLLATE utf8mb4_unicode_ci,
+  `web_page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -382,7 +382,7 @@ CREATE TABLE `nav_fr` (
   `op1` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `op2` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `logo_img_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op1_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op1_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -412,7 +412,7 @@ CREATE TABLE `plan_du_site_page_fr` (
   `h2_1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `h2_2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `h2_3` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `opt1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `opt1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `h2_4` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -516,4 +516,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-12 14:55:37
+-- Dump completed on 2026-06-29 10:27:10
